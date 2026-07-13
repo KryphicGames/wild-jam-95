@@ -12,6 +12,7 @@ config_version=5
 
 config/name="Living Legends"
 config/version="1.0.0"
+run/main_scene="uid://bdwgflf4c7e3o"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
