@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://bdwgflf4c7e3o"]
+
+[node name="Main Menu" type="Control" unique_id=1801875058]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Contents" type="VBoxContainer" parent="." unique_id=1878011871]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Hero" type="VBoxContainer" parent="Contents" unique_id=95824296]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Title" type="Label" parent="Contents/Hero" unique_id=1631723827]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "LIVING LEGENDS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Play" type="Button" parent="Contents/Hero" unique_id=1412455284]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+text = "PLAY"
+
+[node name="Settings" type="Button" parent="Contents/Hero" unique_id=210769965]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+text = "SETTINGS"
+
+[node name="Information" type="HBoxContainer" parent="Contents" unique_id=1086388878]
+layout_mode = 2
+
+[node name="Creator" type="Label" parent="Contents/Information" unique_id=1784292489]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Kryphic Games"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Version" type="Label" parent="Contents/Information" unique_id=1067866867]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1.0.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="License" type="Label" parent="Contents/Information" unique_id=769247373]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "MIT License 2026"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GitHub" type="Label" parent="Contents/Information" unique_id=14632523]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Github: KryphicGames/wild-jam-95"
+horizontal_alignment = 1
+vertical_alignment = 1
