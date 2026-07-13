@@ -29,6 +29,3 @@ func _on_stream_finished():
 
 func _ready() -> void:
 	Log.Info("AudioManager was loaded successfully.", debugPrefix)
-	Log.Debug("AudioManager was loaded debugfully.", debugPrefix)
-	Log.Warn("AudioManager was loaded with a warn.", debugPrefix)
-	Log.Error("AudioManager was loaded with an error.", debugPrefix)
