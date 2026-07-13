@@ -1,5 +1,7 @@
 extends Node
 
+@export var debugPrefix = "AudioManager"
+
 enum Audio {
 	UI,
 	TWO,
@@ -26,4 +28,4 @@ func _on_stream_finished():
 
 
 func _ready() -> void:
-	print("[AudioManager] Audio Manager loaded.")
+	Log.Info("AudioManager was loaded successfully.", debugPrefix)
