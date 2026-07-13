@@ -14,6 +14,7 @@ config/name="Living Legends"
 config/version="1.0.0"
 run/main_scene="uid://bdwgflf4c7e3o"
 config/features=PackedStringArray("4.7", "GL Compatibility")
+boot_splash/show_image=false
 config/icon="res://icon.svg"
 
 [autoload]

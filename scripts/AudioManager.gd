@@ -28,4 +28,4 @@ func _on_stream_finished():
 
 
 func _ready() -> void:
-	Log.Info("AudioManager was loaded successfully.", debugPrefix)
+	Log.Info("AudioManager loaded successfully.", debugPrefix)
