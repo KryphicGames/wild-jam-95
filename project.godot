@@ -24,6 +24,7 @@ Log="*uid://bwujdqpdk7ajr"
 [display]
 
 window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [physics]
 
