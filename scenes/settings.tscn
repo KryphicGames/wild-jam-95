@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://dbj20fn0of377"]
+
+[ext_resource type="Texture2D" uid="uid://nmakvgr7t5ry" path="res://assets/textures/bg.png" id="1_5p8wc"]
+
+[node name="Settings" type="Control" unique_id=934391754]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bg" type="TextureRect" parent="." unique_id=157559147]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5p8wc")
+expand_mode = 1
+
+[node name="Content" type="VBoxContainer" parent="." unique_id=1318330411]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="HBoxContainer" parent="Content" unique_id=187596257]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="Content/Header" unique_id=1042564891]
+layout_mode = 2
+text = "BUTTON_BACK"
+
+[node name="Title" type="RichTextLabel" parent="Content/Header" unique_id=775665363]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+bbcode_enabled = true
+text = "TITLE"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+autowrap_trim_flags = 0
+shortcut_keys_enabled = false
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="TabContainer" type="TabContainer" parent="Content" unique_id=1374748351]
+layout_mode = 2
+size_flags_vertical = 3
+tab_alignment = 1
+current_tab = 0
+tab_0/title = "TAB_AUDIO"
+tab_1/title = "TAB_GRAPHICS"
+tab_2/title = "TAB_ACCESSIBILITY"
+
+[node name="Audio" type="MarginContainer" parent="Content/TabContainer" unique_id=349869007]
+layout_mode = 2
+metadata/_tab_index = 0
+metadata/_tab_name = "TAB_AUDIO"
+
+[node name="Graphics" type="MarginContainer" parent="Content/TabContainer" unique_id=1031838045]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+metadata/_tab_name = "TAB_GRAPHICS"
+
+[node name="Accessibility" type="MarginContainer" parent="Content/TabContainer" unique_id=1750178928]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+metadata/_tab_name = "TAB_ACCESSIBILITY"

@@ -24,6 +24,7 @@ Log="*uid://bwujdqpdk7ajr"
 
 [display]
 
+window/size/mode=2
 window/stretch/mode="canvas_items"
 
 [gui]
@@ -32,7 +33,7 @@ theme/custom_font="uid://csmlin70k56io"
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://translations/main_menu.de.translation", "res://translations/main_menu.en.translation")
+locale/translations=PackedStringArray("res://translations/main_menu.de.translation", "res://translations/main_menu.en.translation", "res://translations/settings.de.translation", "res://translations/settings.en.translation")
 
 [physics]
 
