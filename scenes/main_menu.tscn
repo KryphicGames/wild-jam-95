@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d4fddi678xr5y" path="res://scripts/scenes/main_menu.gd" id="1_l6cm7"]
 [ext_resource type="Texture2D" uid="uid://nmakvgr7t5ry" path="res://assets/textures/bg.png" id="2_bqqt6"]
 [ext_resource type="AudioStream" uid="uid://rouv8gbu1qky" path="res://assets/audio/music/menu.wav" id="3_bqqt6"]
+[ext_resource type="Shader" uid="uid://btixtusi73vku" path="res://shaders/vignette.gdshader" id="4_wu84c"]
 
 [sub_resource type="Animation" id="Animation_wu84c"]
 length = 0.001
@@ -39,6 +40,12 @@ _data = {
 &"RESET": SubResource("Animation_wu84c"),
 &"fade-in": SubResource("Animation_bqqt6")
 }
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bqqt6"]
+shader = ExtResource("4_wu84c")
+shader_parameter/alpha = 0.2
+shader_parameter/inner_radius = 0.73
+shader_parameter/outer_radius = 1.1400000000000001
 
 [node name="Main Menu" type="Control" unique_id=1801875058]
 layout_mode = 3
@@ -157,5 +164,16 @@ color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Fade" unique_id=1128780181]
 libraries/ = SubResource("AnimationLibrary_wu84c")
+
+[node name="Vignette" type="ColorRect" parent="." unique_id=1631202047]
+material = SubResource("ShaderMaterial_bqqt6")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
 
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]
