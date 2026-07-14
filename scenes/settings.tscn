@@ -58,12 +58,13 @@ justification_flags = 0
 layout_mode = 2
 size_flags_vertical = 3
 tab_alignment = 1
-current_tab = 0
+current_tab = 2
 tab_0/title = "TAB_AUDIO"
 tab_1/title = "TAB_GRAPHICS"
 tab_2/title = "TAB_ACCESSIBILITY"
 
 [node name="Audio" type="MarginContainer" parent="Content/TabContainer" unique_id=349869007]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 metadata/_tab_name = "TAB_AUDIO"
@@ -75,7 +76,43 @@ metadata/_tab_index = 1
 metadata/_tab_name = "TAB_GRAPHICS"
 
 [node name="Accessibility" type="MarginContainer" parent="Content/TabContainer" unique_id=1750178928]
-visible = false
 layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
 metadata/_tab_index = 2
 metadata/_tab_name = "TAB_ACCESSIBILITY"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Content/TabContainer/Accessibility" unique_id=1766879664]
+layout_mode = 2
+
+[node name="List" type="VBoxContainer" parent="Content/TabContainer/Accessibility/ScrollContainer" unique_id=287609137]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="Haptics" type="HBoxContainer" parent="Content/TabContainer/Accessibility/ScrollContainer/List" unique_id=1071871338]
+layout_mode = 2
+tooltip_text = "TOOLTIP_HAPTICS"
+
+[node name="Label" type="Label" parent="Content/TabContainer/Accessibility/ScrollContainer/List/Haptics" unique_id=243024604]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ACCESS_HAPTICS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_trim_flags = 0
+justification_flags = 0
+
+[node name="HSlider" type="HSlider" parent="Content/TabContainer/Accessibility/ScrollContainer/List/Haptics" unique_id=1045727028]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+min_value = 1.0
+max_value = 5.0
+value = 3.0
+scrollable = false
+tick_count = 5
+ticks_on_borders = true

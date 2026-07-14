@@ -5,3 +5,7 @@ TITLE;[b]SETTINGS[/b];[b]EINSTELLUNGEN[/b]
 TAB_AUDIO;Audio;Audio
 TAB_GRAPHICS;Graphics;Grafik
 TAB_ACCESSIBILITY;Accessibility;Bedienungshilfen
+
+ACCESS_HAPTICS;Haptics;Haptiken
+
+TOOLTIP_HAPTICS;Haptics aren't available on Browser or Desktop Devices;Haptiken sind im Browser oder auf Desktop-Geräten nicht verfügbar
