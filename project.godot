@@ -30,6 +30,10 @@ window/stretch/mode="canvas_items"
 
 theme/custom_font="uid://csmlin70k56io"
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://translations/main_menu.de.translation", "res://translations/main_menu.en.translation")
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

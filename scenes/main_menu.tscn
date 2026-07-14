@@ -45,7 +45,7 @@ _data = {
 shader = ExtResource("4_wu84c")
 shader_parameter/alpha = 0.2
 shader_parameter/inner_radius = 0.73
-shader_parameter/outer_radius = 1.1400000000000001
+shader_parameter/outer_radius = 1.14
 
 [node name="Main Menu" type="Control" unique_id=1801875058]
 layout_mode = 3
@@ -103,14 +103,14 @@ custom_minimum_size = Vector2(350, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 24
-text = "PLAY"
+text = "BUTTON_PLAY"
 
 [node name="Settings" type="Button" parent="Contents/Hero" unique_id=210769965]
 custom_minimum_size = Vector2(350, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 24
-text = "SETTINGS"
+text = "BUTTON_SETTINGS"
 
 [node name="Information" type="HBoxContainer" parent="Contents" unique_id=1086388878]
 layout_mode = 2
