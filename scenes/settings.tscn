@@ -1,0 +1,266 @@
+[gd_scene format=3 uid="uid://dbj20fn0of377"]
+
+[ext_resource type="Texture2D" uid="uid://nmakvgr7t5ry" path="res://assets/textures/bg.png" id="1_5p8wc"]
+[ext_resource type="Script" uid="uid://c8ux35k1pqilu" path="res://scripts/scenes/settings.gd" id="1_6wm04"]
+[ext_resource type="AudioStream" uid="uid://rouv8gbu1qky" path="res://assets/audio/music/menu.wav" id="1_r6d6q"]
+
+[node name="Settings" type="Control" unique_id=934391754]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6wm04")
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=152270482]
+stream = ExtResource("1_r6d6q")
+autoplay = true
+
+[node name="bg" type="TextureRect" parent="." unique_id=157559147]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5p8wc")
+expand_mode = 1
+
+[node name="Content" type="VBoxContainer" parent="." unique_id=1318330411]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="HBoxContainer" parent="Content" unique_id=187596257]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="Content/Header" unique_id=1042564891]
+layout_mode = 2
+text = "BUTTON_BACK"
+
+[node name="Title" type="RichTextLabel" parent="Content/Header" unique_id=775665363]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+bbcode_enabled = true
+text = "TITLE"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+autowrap_trim_flags = 0
+shortcut_keys_enabled = false
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="TabContainer" type="TabContainer" parent="Content" unique_id=1374748351]
+layout_mode = 2
+size_flags_vertical = 3
+tab_alignment = 1
+current_tab = 2
+tab_0/title = "TAB_GENERAL"
+tab_1/title = "TAB_ACCESSIBILITY"
+tab_2/title = "TAB_AUDIO"
+tab_3/title = "TAB_GRAPHICS"
+
+[node name="General" type="MarginContainer" parent="Content/TabContainer" unique_id=1212233664]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+metadata/_tab_index = 0
+metadata/_tab_name = "TAB_GENERAL"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Content/TabContainer/General" unique_id=807427233]
+layout_mode = 2
+
+[node name="List" type="VBoxContainer" parent="Content/TabContainer/General/ScrollContainer" unique_id=1553389266]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="Haptics" type="HBoxContainer" parent="Content/TabContainer/General/ScrollContainer/List" unique_id=2103882923]
+layout_mode = 2
+tooltip_text = "TOOLTIP_HAPTICS"
+
+[node name="Label" type="Label" parent="Content/TabContainer/General/ScrollContainer/List/Haptics" unique_id=280640045]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ACCESS_HAPTICS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_trim_flags = 0
+justification_flags = 0
+
+[node name="HSlider" type="HSlider" parent="Content/TabContainer/General/ScrollContainer/List/Haptics" unique_id=888868506]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+min_value = 1.0
+max_value = 5.0
+value = 3.0
+scrollable = false
+tick_count = 5
+ticks_on_borders = true
+
+[node name="Accessibility" type="MarginContainer" parent="Content/TabContainer" unique_id=1750178928]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+metadata/_tab_index = 1
+metadata/_tab_name = "TAB_ACCESSIBILITY"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Content/TabContainer/Accessibility" unique_id=1766879664]
+layout_mode = 2
+
+[node name="List" type="VBoxContainer" parent="Content/TabContainer/Accessibility/ScrollContainer" unique_id=287609137]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="Haptics" type="HBoxContainer" parent="Content/TabContainer/Accessibility/ScrollContainer/List" unique_id=1071871338]
+layout_mode = 2
+tooltip_text = "TOOLTIP_ACCESS_HAPTICS"
+
+[node name="Label" type="Label" parent="Content/TabContainer/Accessibility/ScrollContainer/List/Haptics" unique_id=243024604]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ACCESS_HAPTICS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_trim_flags = 0
+justification_flags = 0
+
+[node name="HSlider" type="HSlider" parent="Content/TabContainer/Accessibility/ScrollContainer/List/Haptics" unique_id=1045727028]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+min_value = 1.0
+max_value = 5.0
+value = 3.0
+editable = false
+scrollable = false
+tick_count = 5
+ticks_on_borders = true
+
+[node name="Audio" type="MarginContainer" parent="Content/TabContainer" unique_id=1602806384]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+metadata/_tab_index = 2
+metadata/_tab_name = "TAB_AUDIO"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Content/TabContainer/Audio" unique_id=1368624502]
+layout_mode = 2
+
+[node name="List" type="VBoxContainer" parent="Content/TabContainer/Audio/ScrollContainer" unique_id=1021990698]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="Music" type="HBoxContainer" parent="Content/TabContainer/Audio/ScrollContainer/List" unique_id=1215887958]
+layout_mode = 2
+tooltip_text = "TOOLTIP_AUDIO_MUSIC"
+
+[node name="Label" type="Label" parent="Content/TabContainer/Audio/ScrollContainer/List/Music" unique_id=165486818]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "AUDIO_MUSIC"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_trim_flags = 0
+justification_flags = 0
+
+[node name="HSlider" type="HSlider" parent="Content/TabContainer/Audio/ScrollContainer/List/Music" unique_id=1025761506]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+min_value = -100.0
+max_value = 20.0
+scrollable = false
+ticks_on_borders = true
+
+[node name="Sounds" type="HBoxContainer" parent="Content/TabContainer/Audio/ScrollContainer/List" unique_id=931515945]
+layout_mode = 2
+tooltip_text = "TOOLTIP_AUDIO_SOUNDS"
+
+[node name="Label" type="Label" parent="Content/TabContainer/Audio/ScrollContainer/List/Sounds" unique_id=1142173813]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "AUDIO_SOUNDS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_trim_flags = 0
+justification_flags = 0
+
+[node name="HSlider" type="HSlider" parent="Content/TabContainer/Audio/ScrollContainer/List/Sounds" unique_id=1853149072]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+min_value = -100.0
+max_value = 20.0
+scrollable = false
+ticks_on_borders = true
+
+[node name="Graphics" type="MarginContainer" parent="Content/TabContainer" unique_id=2042792278]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+metadata/_tab_index = 3
+metadata/_tab_name = "TAB_GRAPHICS"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Content/TabContainer/Graphics" unique_id=802104653]
+layout_mode = 2
+
+[node name="List" type="VBoxContainer" parent="Content/TabContainer/Graphics/ScrollContainer" unique_id=969104921]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="Haptics" type="HBoxContainer" parent="Content/TabContainer/Graphics/ScrollContainer/List" unique_id=2002419722]
+layout_mode = 2
+tooltip_text = "TOOLTIP_HAPTICS"
+
+[node name="Label" type="Label" parent="Content/TabContainer/Graphics/ScrollContainer/List/Haptics" unique_id=412120785]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ACCESS_HAPTICS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_trim_flags = 0
+justification_flags = 0
+
+[node name="HSlider" type="HSlider" parent="Content/TabContainer/Graphics/ScrollContainer/List/Haptics" unique_id=2042526066]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+min_value = 1.0
+max_value = 5.0
+value = 3.0
+scrollable = false
+tick_count = 5
+ticks_on_borders = true
+
+[connection signal="finished" from="Music" to="." method="_on_music_finished"]
