@@ -73,12 +73,23 @@ size_flags_vertical = 3
 theme_override_constants/separation = 8
 alignment = 1
 
-[node name="Title" type="Label" parent="Contents/Hero" unique_id=1631723827]
+[node name="Title" type="RichTextLabel" parent="Contents/Hero" unique_id=907824833]
 layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "LIVING LEGENDS"
+theme_override_font_sizes/normal_font_size = 64
+theme_override_font_sizes/bold_font_size = 64
+theme_override_font_sizes/bold_italics_font_size = 64
+theme_override_font_sizes/italics_font_size = 64
+theme_override_font_sizes/mono_font_size = 64
+bbcode_enabled = true
+text = "[b]LIVING LEGENDS[/b]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+autowrap_trim_flags = 0
+shortcut_keys_enabled = false
 horizontal_alignment = 1
 vertical_alignment = 1
+justification_flags = 0
 
 [node name="Play" type="Button" parent="Contents/Hero" unique_id=1412455284]
 custom_minimum_size = Vector2(350, 0)
@@ -100,6 +111,7 @@ layout_mode = 2
 [node name="Creator" type="Label" parent="Contents/Information" unique_id=1784292489]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
 text = "Kryphic Games"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -107,6 +119,7 @@ vertical_alignment = 1
 [node name="Version" type="Label" parent="Contents/Information" unique_id=1067866867]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
 text = "1.0.0"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -114,6 +127,7 @@ vertical_alignment = 1
 [node name="License" type="Label" parent="Contents/Information" unique_id=769247373]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
 text = "MIT License 2026"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -121,6 +135,7 @@ vertical_alignment = 1
 [node name="GitHub" type="Label" parent="Contents/Information" unique_id=14632523]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
 text = "Github: KryphicGames/wild-jam-95"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -130,6 +145,7 @@ stream = ExtResource("3_bqqt6")
 autoplay = true
 
 [node name="Fade" type="ColorRect" parent="." unique_id=1303601824]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
