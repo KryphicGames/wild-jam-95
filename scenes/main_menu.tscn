@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d4fddi678xr5y" path="res://scripts/scenes/main_menu.gd" id="1_l6cm7"]
 [ext_resource type="Texture2D" uid="uid://nmakvgr7t5ry" path="res://assets/textures/bg.png" id="2_bqqt6"]
-[ext_resource type="AudioStream" uid="uid://35ri0671llbu" path="res://assets/audio/music/main-menu.wav" id="2_ekxnf"]
+[ext_resource type="AudioStream" uid="uid://rouv8gbu1qky" path="res://assets/audio/music/menu.wav" id="3_bqqt6"]
 
 [sub_resource type="Animation" id="Animation_wu84c"]
 length = 0.001
@@ -126,7 +126,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=35476522]
-stream = ExtResource("2_ekxnf")
+stream = ExtResource("3_bqqt6")
 autoplay = true
 
 [node name="Fade" type="ColorRect" parent="." unique_id=1303601824]
