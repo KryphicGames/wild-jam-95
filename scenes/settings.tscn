@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dbj20fn0of377"]
 
 [ext_resource type="Texture2D" uid="uid://nmakvgr7t5ry" path="res://assets/textures/bg.png" id="1_5p8wc"]
+[ext_resource type="Script" uid="uid://c8ux35k1pqilu" path="res://scripts/scenes/settings.gd" id="1_6wm04"]
+[ext_resource type="AudioStream" uid="uid://rouv8gbu1qky" path="res://assets/audio/music/menu.wav" id="1_r6d6q"]
 
 [node name="Settings" type="Control" unique_id=934391754]
 layout_mode = 3
@@ -9,6 +11,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6wm04")
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=152270482]
+stream = ExtResource("1_r6d6q")
+autoplay = true
 
 [node name="bg" type="TextureRect" parent="." unique_id=157559147]
 layout_mode = 1
@@ -255,3 +262,5 @@ value = 3.0
 scrollable = false
 tick_count = 5
 ticks_on_borders = true
+
+[connection signal="finished" from="Music" to="." method="_on_music_finished"]
