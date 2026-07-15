@@ -7,3 +7,4 @@ This is Kryphic's Participation for the Godot Wild Jam #95
 - The whole Idea and organisation was managed by @scbeacham.
 - All of the 3D Assets were created by @zer1ks-git.
 - The whole SFX and Music was made by @dunhamsounddesign.
+- The font Geist Pixel came from Google Fonts.
