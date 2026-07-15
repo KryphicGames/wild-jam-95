@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://oh3jc0l10f4s"]
+
+[ext_resource type="Texture2D" uid="uid://din2qn55os4rl" path="res://assets/textures/card_middle.png" id="1_yncv6"]
+
+[node name="TextureRect" type="TextureRect" unique_id=363865671]
+offset_right = 804.0
+offset_bottom = 949.0
+texture = ExtResource("1_yncv6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1868750627]
+layout_mode = 1
+offset_right = 90.0
+offset_bottom = 40.0
+text = "MIDDLE CARD"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+autowrap_trim_flags = 0
+shortcut_keys_enabled = false
+justification_flags = 0

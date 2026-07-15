@@ -2,6 +2,20 @@
 
 [ext_resource type="PackedScene" uid="uid://cyk0ty5fwu5s2" path="res://components/fade.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://5m1wm6pufj05" path="res://scripts/game.gd" id="1_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://nmakvgr7t5ry" path="res://assets/textures/bg.png" id="3_lnu2h"]
+[ext_resource type="Shader" uid="uid://btixtusi73vku" path="res://shaders/vignette.gdshader" id="4_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://du6vm8qttwc0n" path="res://assets/textures/tbrender_Camera_1_FullQuality.png" id="4_p57ef"]
+[ext_resource type="PackedScene" uid="uid://b3sjc2pkjs1ot" path="res://components/hero_card.tscn" id="5_iywne"]
+[ext_resource type="PackedScene" uid="uid://dxwvti6pg4hpy" path="res://components/event_card.tscn" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://cs063wp4x20em" path="res://components/right_card.tscn" id="8_gee14"]
+[ext_resource type="PackedScene" uid="uid://oh3jc0l10f4s" path="res://components/middle_card.tscn" id="9_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://be6unwjlkhc2p" path="res://components/left_card.tscn" id="10_vtaks"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iywne"]
+shader = ExtResource("4_lbhrr")
+shader_parameter/alpha = 0.2
+shader_parameter/inner_radius = 0.73
+shader_parameter/outer_radius = 1.14
 
 [node name="Game" type="Control" unique_id=705198717]
 layout_mode = 3
@@ -19,3 +33,68 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="Background" type="TextureRect" parent="." unique_id=2000039980]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_lnu2h")
+expand_mode = 1
+
+[node name="Background2" type="TextureRect" parent="." unique_id=2060711453]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_p57ef")
+expand_mode = 1
+
+[node name="Vignette" type="ColorRect" parent="." unique_id=226354621]
+material = SubResource("ShaderMaterial_iywne")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HeroCard" parent="." unique_id=1908081806 instance=ExtResource("5_iywne")]
+layout_mode = 1
+offset_left = 259.0
+offset_top = 64.0
+offset_right = 452.0
+offset_bottom = 292.0
+
+[node name="TextureRect" parent="." unique_id=363865671 instance=ExtResource("7_u5sy4")]
+layout_mode = 0
+offset_left = 479.0
+offset_top = 58.0
+offset_right = 894.0
+offset_bottom = 293.0
+
+[node name="TextureRect2" parent="." unique_id=892738914 instance=ExtResource("8_gee14")]
+layout_mode = 0
+offset_left = 780.0
+offset_top = 340.0
+offset_right = 981.0
+offset_bottom = 598.4674
+
+[node name="TextureRect3" parent="." unique_id=834786675 instance=ExtResource("9_0tnpc")]
+layout_mode = 0
+offset_left = 541.0
+offset_top = 338.0
+offset_right = 724.0
+offset_bottom = 598.7612
+
+[node name="TextureRect4" parent="." unique_id=355224597 instance=ExtResource("10_vtaks")]
+layout_mode = 0
+offset_left = 297.0
+offset_top = 343.0
+offset_right = 489.0
+offset_bottom = 601.81824
