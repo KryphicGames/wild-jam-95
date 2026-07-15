@@ -2,21 +2,36 @@
 
 [ext_resource type="Texture2D" uid="uid://c6s6l01n5fytp" path="res://assets/textures/event_card.png" id="1_lwdr4"]
 
-[node name="TextureRect" type="TextureRect" unique_id=363865671]
+[node name="EventCard" type="TextureRect" unique_id=363865671]
 offset_right = 804.0
-offset_bottom = 949.0
+offset_bottom = 453.0
 texture = ExtResource("1_lwdr4")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Title" type="RichTextLabel" parent="." unique_id=1868750627]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=158974402]
 layout_mode = 1
-offset_right = 90.0
-offset_bottom = 40.0
-text = "EVENT CARD"
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=659792534]
+layout_mode = 2
+
+[node name="Title" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=1985353694]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "A wandering merchant waves you over."
 fit_content = true
 scroll_active = false
-autowrap_mode = 0
 autowrap_trim_flags = 0
 shortcut_keys_enabled = false
+horizontal_alignment = 1
 justification_flags = 0

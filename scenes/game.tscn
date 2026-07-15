@@ -71,7 +71,7 @@ offset_top = 64.0
 offset_right = 452.0
 offset_bottom = 292.0
 
-[node name="TextureRect" parent="." unique_id=363865671 instance=ExtResource("7_u5sy4")]
+[node name="EventCard" parent="." unique_id=363865671 instance=ExtResource("7_u5sy4")]
 layout_mode = 0
 offset_left = 479.0
 offset_top = 58.0
