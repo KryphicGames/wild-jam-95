@@ -13,6 +13,9 @@ func _on_music_finished() -> void:
 
 
 func _on_settings_pressed() -> void:
+	FadeRect.show()
+	Fade.play("fade-out")
+	await Fade.animation_finished
 	get_tree().change_scene_to_file("res://scenes/settings.tscn")
 
 

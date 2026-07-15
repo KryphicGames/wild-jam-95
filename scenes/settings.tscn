@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://nmakvgr7t5ry" path="res://assets/textures/bg.png" id="1_5p8wc"]
 [ext_resource type="Script" uid="uid://c8ux35k1pqilu" path="res://scripts/scenes/settings.gd" id="1_6wm04"]
 [ext_resource type="AudioStream" uid="uid://rouv8gbu1qky" path="res://assets/audio/music/menu.wav" id="1_r6d6q"]
+[ext_resource type="PackedScene" uid="uid://cyk0ty5fwu5s2" path="res://components/fade.tscn" id="2_f4mfi"]
 
 [node name="Settings" type="Control" unique_id=934391754]
 layout_mode = 3
@@ -262,6 +263,10 @@ value = 3.0
 scrollable = false
 tick_count = 5
 ticks_on_borders = true
+
+[node name="Fade" parent="." unique_id=1903997680 instance=ExtResource("2_f4mfi")]
+visible = false
+layout_mode = 1
 
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]
 [connection signal="pressed" from="Content/Header/Back" to="." method="_on_back_pressed"]
