@@ -1,0 +1,58 @@
+{
+	"id": "wolf",
+
+	"title": "A Cry in the Forest",
+	"description": "You hear a wolf cub crying.",
+	"image": "res://cards/wolf.png",
+
+	"trigger": {
+		"flags": [],
+		"not_flags": [],
+		"stats": {
+			"greed": {
+				"max": 100
+			}
+		}
+	},
+
+	"options": [
+		{
+			"id": "save",
+			"title": "Save it",
+			"description": "Help the cub.",
+
+			"effects": {
+				"gold": -10,
+				"greed": -2,
+				"popularity": 3,
+				"add_flags": [
+                    "saved_wolf"
+				]
+			}
+		},
+
+		{
+			"id": "ignore",
+			"title": "Ignore it",
+			"description": "Walk away.",
+
+			"effects": {
+				"greed": 2
+			}
+		},
+
+		{
+			"id": "kill",
+			"title": "Kill it",
+			"description": "Kill it.",
+
+			"effects": {
+				"gold": 5,
+				"greed": 10,
+				"add_flags": [
+                    "killed_wolf"
+				]
+			}
+		}
+	]
+}
