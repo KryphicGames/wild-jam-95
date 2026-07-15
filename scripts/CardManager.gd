@@ -2,6 +2,7 @@ extends Node
 
 @export var loggerPrefix = "CardLoader"
 var cards: Array = []
+var used_cards: Array = []
 
 
 func load_cards():
@@ -23,7 +24,7 @@ func load_cards():
 		var text := FileAccess.get_file_as_string(path)
 		var json := JSON.new()
 		if json.parse(text) != OK:
-			Log.Errpr("Invalid JSON: " + path, loggerPrefix)
+			Log.Error("Invalid JSON: " + path, loggerPrefix)
 			continue
 		cards.append(json.data)
 	dir.list_dir_end()
@@ -32,13 +33,17 @@ func load_cards():
 
 
 func get_random_card(game) -> Dictionary:
-	var available: Array = []
+	var available := []
 	for card in cards:
+		if used_cards.has(card.id) && !card.repeatable:
+			continue
 		if can_trigger(game, card):
 			available.append(card)
 	if available.is_empty():
 		return {}
-	return available.pick_random()
+	var chosen = available.pick_random()
+	used_cards.append(chosen.id)
+	return chosen
 
 
 func can_trigger(game, card: Dictionary) -> bool:

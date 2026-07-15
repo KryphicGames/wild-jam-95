@@ -1,6 +1,6 @@
 {
 	"id": "wolf",
-
+	"repeatable": true,
 	"title": "A Cry in the Forest",
 	"description": "You hear a wolf cub crying.",
 	"image": "res://cards/wolf.png",
