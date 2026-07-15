@@ -128,6 +128,7 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Fade" parent="." unique_id=1903997680 instance=ExtResource("5_8ln24")]
+visible = false
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0

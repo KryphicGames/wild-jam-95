@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dxwvti6pg4hpy"]
 
 [ext_resource type="Texture2D" uid="uid://c6s6l01n5fytp" path="res://assets/textures/event_card.png" id="1_lwdr4"]
+[ext_resource type="Texture2D" uid="uid://nmakvgr7t5ry" path="res://assets/textures/bg.png" id="2_m2s1q"]
 
 [node name="EventCard" type="TextureRect" unique_id=363865671]
 offset_right = 804.0
@@ -34,4 +35,27 @@ scroll_active = false
 autowrap_trim_flags = 0
 shortcut_keys_enabled = false
 horizontal_alignment = 1
+justification_flags = 0
+
+[node name="Image" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=1716903211]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_m2s1q")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Description" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=652467965]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+
+[node name="Label" type="RichTextLabel" parent="MarginContainer/VBoxContainer/Description" unique_id=1664703654]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "He has rare items, but his prices seem unusual high."
+fit_content = true
+scroll_active = false
+autowrap_trim_flags = 0
+shortcut_keys_enabled = false
 justification_flags = 0
