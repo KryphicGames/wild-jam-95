@@ -128,12 +128,8 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Fade" parent="." unique_id=1903997680 instance=ExtResource("5_8ln24")]
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-grow_horizontal = 1
-grow_vertical = 1
+visible = false
+layout_mode = 1
 
 [connection signal="pressed" from="Contents/Hero/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Contents/Hero/Settings" to="." method="_on_settings_pressed"]
