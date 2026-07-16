@@ -1,0 +1,14 @@
+{
+  "id": "scholar",
+  "title": "The Scholar",
+  "description": "Years spent studying ancient texts have taught you that knowledge is often more valuable than gold. Though inexperienced on the road, your reputation as a learned scholar opens doors others never notice.",
+  "image": "",
+  "starting_stats": {
+    "gold": 15,
+    "greed": 0,
+    "popularity": 10
+  },
+  "starting_flags": [
+    "hero_scholar"
+  ]
+}
