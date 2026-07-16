@@ -1,0 +1,60 @@
+{
+  "id": "giants_skeleton",
+  "title": "The Giant's Skeleton",
+  "description": "Half-buried beneath the earth lies the skeleton of a giant. Its ribcage rises higher than the surrounding trees, and an ancient weapon still rests in its massive hand.",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [],
+    "not_flags": [
+      "active_quest"
+    ]
+  },
+  "options": [
+    {
+      "id": "explore_skeleton",
+      "title": "Explore the Skeleton",
+      "description": "Climb through the giant's remains in search of forgotten treasures.",
+      "image": "",
+      "effects": {
+        "gold": 35,
+        "greed": 5,
+        "popularity": 5,
+        "add_flags": [
+          "explored_giant"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "take_weapon",
+      "title": "Take the Giant's Weapon",
+      "description": "A relic this impressive belongs in your hands, not buried in the dirt.",
+      "image": "",
+      "effects": {
+        "gold": 60,
+        "greed": 15,
+        "popularity": -5,
+        "add_flags": [
+          "claimed_giant_weapon"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "honor_the_dead",
+      "title": "Honor the Fallen Giant",
+      "description": "Offer a moment of silence before continuing your journey.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -10,
+        "popularity": 20,
+        "add_flags": [
+          "honored_giant"
+        ],
+        "remove_flags": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "colossal_dragon",
+  "title": "The Colossal Dragon",
+  "description": "The mountain trembles as an enormous dragon rises above the clouds. Its shadow covers the valley, and its burning eyes settle upon you.",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [
+      "dragon_finale_ready"
+    ],
+    "not_flags": []
+  },
+  "options": [
+    {
+      "id": "stand_before_dragon",
+      "title": "Stand Before It",
+      "description": "You refuse to run, placing yourself between the dragon and the valley.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -10,
+        "popularity": 25,
+        "add_flags": [
+          "dragon_defender"
+        ],
+        "remove_flags": [
+          "active_quest",
+          "dragon_quest",
+          "dragon_finale_ready",
+          "destroyed_dragon_egg",
+          "dragon_protected",
+          "dragon_trained",
+          "dragon_abandoned",
+          "dragon_hunted",
+          "dragon_pursued",
+          "dragon_exploited"
+        ]
+      }
+    },
+    {
+      "id": "command_dragon",
+      "title": "Attempt to Command It",
+      "description": "You step forward and demand that the colossal creature submit to your will.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": 15,
+        "popularity": 15,
+        "add_flags": [
+          "dragon_master"
+        ],
+        "remove_flags": [
+          "active_quest",
+          "dragon_quest",
+          "dragon_finale_ready",
+          "destroyed_dragon_egg",
+          "dragon_protected",
+          "dragon_trained",
+          "dragon_abandoned",
+          "dragon_hunted",
+          "dragon_pursued",
+          "dragon_exploited"
+        ]
+      }
+    },
+    {
+      "id": "steal_hoard",
+      "title": "Steal Its Hoard",
+      "description": "While the dragon turns toward the valley, you slip into its cavern and seize whatever treasure you can carry.",
+      "image": "",
+      "effects": {
+        "gold": 75,
+        "greed": 25,
+        "popularity": -15,
+        "add_flags": [
+          "dragon_thief"
+        ],
+        "remove_flags": [
+          "active_quest",
+          "dragon_quest",
+          "dragon_finale_ready",
+          "destroyed_dragon_egg",
+          "dragon_protected",
+          "dragon_trained",
+          "dragon_abandoned",
+          "dragon_hunted",
+          "dragon_pursued",
+          "dragon_exploited"
+        ]
+      }
+    }
+  ]
+}

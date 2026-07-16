@@ -1,0 +1,60 @@
+{
+  "id": "cry_for_help",
+  "title": "A Cry for Help",
+  "description": "As you pass through a narrow mountain pass, desperate cries echo from below. A traveler dangles from the edge of a cliff, desperately clinging to a loose root. They won't survive much longer.",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [],
+    "not_flags": [
+      "active_quest"
+    ]
+  },
+  "options": [
+    {
+      "id": "save_traveler",
+      "title": "Pull Them Up",
+      "description": "Risk your own safety to rescue the stranded traveler.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -10,
+        "popularity": 25,
+        "add_flags": [
+          "saved_traveler"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "ask_for_reward",
+      "title": "Demand Payment",
+      "description": "\"I'll save you... but it'll cost you.\"",
+      "image": "",
+      "effects": {
+        "gold": 40,
+        "greed": 10,
+        "popularity": -5,
+        "add_flags": [
+          "rescued_for_profit"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "walk_away",
+      "title": "Keep Walking",
+      "description": "You pretend not to hear the cries and continue down the road.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": 5,
+        "popularity": -20,
+        "add_flags": [
+          "ignored_traveler"
+        ],
+        "remove_flags": []
+      }
+    }
+  ]
+}

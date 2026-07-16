@@ -1,0 +1,67 @@
+{
+  "id": "old_witch",
+  "title": "The Old Witch",
+  "description": "Deep within the forest, an old witch stirs a bubbling cauldron. Without looking up, she smiles and says, \"I've been expecting you.\" She offers knowledge, but every gift has a price.",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [],
+    "not_flags": [
+      "active_quest"
+    ]
+  },
+  "options": [
+    {
+      "id": "accept_bargain",
+      "title": "Accept Her Bargain",
+      "description": "Knowledge is worth any price... isn't it?",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": 0,
+        "popularity": 5,
+        "add_flags": [
+          "active_quest",
+          "witch_quest",
+          "accepted_bargain"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "steal_spellbook",
+      "title": "Steal Her Spellbook",
+      "description": "If knowledge has a price, perhaps it's cheaper to simply take it.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": 15,
+        "popularity": -5,
+        "add_flags": [
+          "active_quest",
+          "witch_quest",
+          "stole_spellbook"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "walk_away",
+      "title": "Walk Away",
+      "description": "Some doors are better left unopened.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -5,
+        "popularity": 10,
+        "add_flags": [
+          "active_quest",
+          "witch_quest",
+          "refused_witch",
+          "witch_finale_ready"
+        ],
+        "remove_flags": []
+      }
+    }
+  ]
+}

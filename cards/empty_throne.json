@@ -1,0 +1,69 @@
+{
+  "id": "empty_throne",
+  "title": "The Empty Throne",
+  "description": "You arrive at the royal castle only to find the throne abandoned. The court is in chaos. Some nobles urge you to support the young heir, while others whisper that the kingdom needs a stronger ruler.",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [
+      "accepted_summons"
+    ],
+    "not_flags": []
+  },
+  "options": [
+    {
+      "id": "support_heir",
+      "title": "Support the Heir",
+      "description": "Stand behind the rightful successor and help stabilize the kingdom.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -5,
+        "popularity": 20,
+        "add_flags": [
+          "supported_heir",
+          "kingdom_finale_ready"
+        ],
+        "remove_flags": [
+          "accepted_summons"
+        ]
+      }
+    },
+    {
+      "id": "claim_throne",
+      "title": "Claim the Throne",
+      "description": "Perhaps the kingdom needs you more than it needs another weak monarch.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": 20,
+        "popularity": -10,
+        "add_flags": [
+          "claimed_throne",
+          "kingdom_finale_ready"
+        ],
+        "remove_flags": [
+          "accepted_summons"
+        ]
+      }
+    },
+    {
+      "id": "investigate",
+      "title": "Search for the King",
+      "description": "Ignore the politics and discover what truly happened to the missing king.",
+      "image": "",
+      "effects": {
+        "gold": -10,
+        "greed": -5,
+        "popularity": 10,
+        "add_flags": [
+          "searched_for_king",
+          "kingdom_finale_ready"
+        ],
+        "remove_flags": [
+          "accepted_summons"
+        ]
+      }
+    }
+  ]
+}

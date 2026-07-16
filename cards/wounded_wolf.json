@@ -1,0 +1,60 @@
+{
+  "id": "wounded_wolf",
+  "title": "Wounded Wolf",
+  "description": "A wounded wolf lies beside the forest path. An arrow protrudes from its shoulder, yet it growls weakly as you approach. It could become a loyal companion... or an easy target.",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [],
+    "not_flags": [
+      "active_quest"
+    ]
+  },
+  "options": [
+    {
+      "id": "help_wolf",
+      "title": "Help the Wolf",
+      "description": "Remove the arrow, bandage its wounds, and nurse it back to health.",
+      "image": "",
+      "effects": {
+        "gold": -10,
+        "greed": -5,
+        "popularity": 20,
+        "add_flags": [
+          "saved_wolf"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "leave_wolf",
+      "title": "Leave It Alone",
+      "description": "Nature will decide its fate. You continue on your journey.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": 0,
+        "popularity": 0,
+        "add_flags": [
+          "ignored_wolf"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "kill_wolf",
+      "title": "Kill the Wolf",
+      "description": "A wounded predator is still a predator. You end its suffering and take its valuable pelt.",
+      "image": "",
+      "effects": {
+        "gold": 25,
+        "greed": 15,
+        "popularity": -15,
+        "add_flags": [
+          "killed_wolf"
+        ],
+        "remove_flags": []
+      }
+    }
+  ]
+}

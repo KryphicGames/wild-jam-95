@@ -1,0 +1,60 @@
+{
+  "id": "old_well",
+  "title": "The Old Well",
+  "description": "An ancient stone well stands alone beside the road. As you peer into its depths, you hear a faint voice whisper, 'Make a wish... but every wish has a price.'",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [],
+    "not_flags": [
+      "active_quest"
+    ]
+  },
+  "options": [
+    {
+      "id": "make_wish",
+      "title": "Make a Wish",
+      "description": "Toss a few coins into the well and hope someone—or something—is listening.",
+      "image": "",
+      "effects": {
+        "gold": -20,
+        "greed": -5,
+        "popularity": 15,
+        "add_flags": [
+          "made_wish"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "search_well",
+      "title": "Climb Into the Well",
+      "description": "If everyone throws coins into the well, surely nobody will miss a few.",
+      "image": "",
+      "effects": {
+        "gold": 35,
+        "greed": 10,
+        "popularity": -5,
+        "add_flags": [
+          "searched_well"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "walk_past",
+      "title": "Ignore the Well",
+      "description": "Some mysteries are best left unexplored.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -5,
+        "popularity": 5,
+        "add_flags": [
+          "ignored_well"
+        ],
+        "remove_flags": []
+      }
+    }
+  ]
+}

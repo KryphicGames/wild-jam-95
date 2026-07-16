@@ -1,0 +1,69 @@
+{
+  "id": "soldiers_at_the_door",
+  "title": "Soldiers at the Door",
+  "description": "Several days after refusing the King's request, armored soldiers arrive at your home. Their captain explains that the kingdom is falling into chaos and that your decision has not gone unnoticed.",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [
+      "refused_summons"
+    ],
+    "not_flags": []
+  },
+  "options": [
+    {
+      "id": "join_the_soldiers",
+      "title": "Join the Soldiers",
+      "description": "Put aside your differences and answer the kingdom's call.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -5,
+        "popularity": 20,
+        "add_flags": [
+          "joined_soldiers",
+          "kingdom_finale_ready"
+        ],
+        "remove_flags": [
+          "refused_summons"
+        ]
+      }
+    },
+    {
+      "id": "bribe_the_captain",
+      "title": "Bribe the Captain",
+      "description": "Offer the captain enough gold to quietly forget he ever found you.",
+      "image": "",
+      "effects": {
+        "gold": -40,
+        "greed": 10,
+        "popularity": -10,
+        "add_flags": [
+          "bribed_captain",
+          "kingdom_finale_ready"
+        ],
+        "remove_flags": [
+          "refused_summons"
+        ]
+      }
+    },
+    {
+      "id": "fight_the_soldiers",
+      "title": "Drive Them Away",
+      "description": "You refuse to be dragged into the kingdom's problems and force the soldiers to retreat.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": 15,
+        "popularity": -20,
+        "add_flags": [
+          "defied_the_crown",
+          "kingdom_finale_ready"
+        ],
+        "remove_flags": [
+          "refused_summons"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "floating_fortress",
+  "title": "The Floating Fortress",
+  "description": "Without warning, the sky darkens. A fortress the size of a mountain descends from the clouds, casting its shadow across the kingdom. Panic spreads as people flee in every direction. Whatever happened to the King suddenly seems insignificant.",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [
+      "kingdom_finale_ready"
+    ],
+    "not_flags": []
+  },
+  "options": [
+    {
+      "id": "defend_the_people",
+      "title": "Defend the Kingdom",
+      "description": "Lead the people to safety and organize a desperate defense against the colossal fortress.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -10,
+        "popularity": 30,
+        "add_flags": [
+          "kingdom_savior"
+        ],
+        "remove_flags": [
+          "active_quest",
+          "kingdom_quest",
+          "kingdom_finale_ready",
+          "supported_heir",
+          "claimed_throne",
+          "searched_for_king",
+          "joined_soldiers",
+          "bribed_captain",
+          "defied_the_crown",
+          "paid_summons"
+        ]
+      }
+    },
+    {
+      "id": "claim_the_fortress",
+      "title": "Claim the Fortress",
+      "description": "If such power exists, it should belong to you. Board the fortress and seize control.",
+      "image": "",
+      "effects": {
+        "gold": 50,
+        "greed": 20,
+        "popularity": 10,
+        "add_flags": [
+          "fortress_conqueror"
+        ],
+        "remove_flags": [
+          "active_quest",
+          "kingdom_quest",
+          "kingdom_finale_ready",
+          "supported_heir",
+          "claimed_throne",
+          "searched_for_king",
+          "joined_soldiers",
+          "bribed_captain",
+          "defied_the_crown",
+          "paid_summons"
+        ]
+      }
+    },
+    {
+      "id": "loot_the_chaos",
+      "title": "Loot the Chaos",
+      "description": "While everyone else focuses on survival, you quietly gather whatever treasures have been abandoned.",
+      "image": "",
+      "effects": {
+        "gold": 100,
+        "greed": 30,
+        "popularity": -25,
+        "add_flags": [
+          "kingdom_opportunist"
+        ],
+        "remove_flags": [
+          "active_quest",
+          "kingdom_quest",
+          "kingdom_finale_ready",
+          "supported_heir",
+          "claimed_throne",
+          "searched_for_king",
+          "joined_soldiers",
+          "bribed_captain",
+          "defied_the_crown",
+          "paid_summons"
+        ]
+      }
+    }
+  ]
+}

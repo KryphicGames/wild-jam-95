@@ -1,0 +1,69 @@
+{
+  "id": "whispering_tome",
+  "title": "The Whispering Tome",
+  "description": "That night, the stolen spellbook begins whispering your name. Its pages turn by themselves, revealing secrets no mortal was meant to know.",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [
+      "stole_spellbook"
+    ],
+    "not_flags": []
+  },
+  "options": [
+    {
+      "id": "read_the_tome",
+      "title": "Read the Tome",
+      "description": "The forbidden knowledge is too tempting to ignore.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": 15,
+        "popularity": -10,
+        "add_flags": [
+          "forbidden_knowledge",
+          "witch_finale_ready"
+        ],
+        "remove_flags": [
+          "stole_spellbook"
+        ]
+      }
+    },
+    {
+      "id": "sell_the_tome",
+      "title": "Sell the Tome",
+      "description": "Someone else can deal with its curse. You'd rather have the gold.",
+      "image": "",
+      "effects": {
+        "gold": 60,
+        "greed": 10,
+        "popularity": -5,
+        "add_flags": [
+          "sold_spellbook",
+          "witch_finale_ready"
+        ],
+        "remove_flags": [
+          "stole_spellbook"
+        ]
+      }
+    },
+    {
+      "id": "burn_the_tome",
+      "title": "Burn the Tome",
+      "description": "Some knowledge is too dangerous to exist.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -10,
+        "popularity": 20,
+        "add_flags": [
+          "destroyed_spellbook",
+          "witch_finale_ready"
+        ],
+        "remove_flags": [
+          "stole_spellbook"
+        ]
+      }
+    }
+  ]
+}

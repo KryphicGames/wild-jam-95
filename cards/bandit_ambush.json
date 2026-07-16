@@ -1,0 +1,60 @@
+{
+  "id": "bandit_ambush",
+  "title": "Bandit Ambush",
+  "description": "As you travel along a quiet forest road, masked bandits emerge from the trees. Their leader smirks and points a sword toward your pack. \"Your gold or your life,\" he says.",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [],
+    "not_flags": [
+      "active_quest"
+    ]
+  },
+  "options": [
+    {
+      "id": "fight_bandits",
+      "title": "Fight",
+      "description": "Draw your weapon and stand your ground.",
+      "image": "",
+      "effects": {
+        "gold": 20,
+        "greed": -5,
+        "popularity": 15,
+        "add_flags": [
+          "defeated_bandits"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "pay_bandits",
+      "title": "Pay Them",
+      "description": "Give them what they want and avoid bloodshed.",
+      "image": "",
+      "effects": {
+        "gold": -25,
+        "greed": 0,
+        "popularity": 0,
+        "add_flags": [
+          "paid_bandits"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "join_bandits",
+      "title": "Join Them",
+      "description": "If you can't beat them... perhaps you should work with them.",
+      "image": "",
+      "effects": {
+        "gold": 40,
+        "greed": 20,
+        "popularity": -15,
+        "add_flags": [
+          "joined_bandits"
+        ],
+        "remove_flags": []
+      }
+    }
+  ]
+}
