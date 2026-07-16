@@ -4,6 +4,8 @@ const HERO_COUNT := 3
 const HERO_CHOICE_CARD := preload("res://components/hero_choice_card.tscn")
 const GAME_SCENE := "res://scenes/game.tscn"
 const MAIN_MENU_SCENE := "res://scenes/main_menu.tscn"
+const CARD_DRAW_OFFSET := Vector2(100, 0)
+const CARD_START_ROTATIONS := [-6.0, 0.0, 6.0]
 
 @export var logger_prefix := "HeroSelection"
 
@@ -36,8 +38,21 @@ func _ready() -> void:
 		var choice_card := HERO_CHOICE_CARD.instantiate() as HeroChoiceCard
 		choices_container.add_child(choice_card)
 		choice_card.present(hero)
+		choice_card.conceal_until_reveal()
+		choice_card.set_selection_enabled(false)
 		choice_card.hero_selected.connect(_on_hero_selected)
 		_choice_cards.append(choice_card)
+
+	await get_tree().process_frame
+	var draw_origin := Vector2(choices_container.size.x, 0) + CARD_DRAW_OFFSET
+	for index in range(_choice_cards.size()):
+		_choice_cards[index].prepare_face_down(
+			draw_origin,
+			CARD_START_ROTATIONS[index]
+		)
+	for choice_card in _choice_cards:
+		await choice_card.draw_and_flip(0.32, 0.24)
+	_set_choices_enabled(true)
 
 
 func _on_hero_selected(hero_id: String) -> void:

@@ -10,6 +10,7 @@ const REQUIRED_FIELDS := [
 	"starting_flags"
 ]
 const REQUIRED_STATS := ["gold", "greed", "popularity"]
+const IMAGE_REGION_FIELDS := ["x", "y", "width", "height"]
 
 @export var logger_prefix := "HeroLoader"
 
@@ -168,6 +169,11 @@ func _is_valid_hero(hero: Dictionary, path: String) -> bool:
 	if !hero.image.is_empty() && !ResourceLoader.exists(hero.image):
 		Log.Error("Hero image does not exist: " + str(hero.image), logger_prefix)
 		return false
+	if hero.has("image_region") && !_is_valid_image_region(hero.image_region, path):
+		return false
+	if hero.has("image_region") && hero.image.is_empty():
+		Log.Error("Hero image_region requires a non-empty image path in " + path, logger_prefix)
+		return false
 
 	if typeof(hero.starting_stats) != TYPE_DICTIONARY:
 		Log.Error("Hero starting_stats must be an object in " + path, logger_prefix)
@@ -189,4 +195,27 @@ func _is_valid_hero(hero: Dictionary, path: String) -> bool:
 			Log.Error("Hero flags must be non-empty strings in " + path, logger_prefix)
 			return false
 
+	return true
+
+
+func _is_valid_image_region(image_region, path: String) -> bool:
+	if typeof(image_region) != TYPE_DICTIONARY:
+		Log.Error("Hero image_region must be an object in " + path, logger_prefix)
+		return false
+	var region: Dictionary = image_region
+
+	for field in IMAGE_REGION_FIELDS:
+		if !region.has(field):
+			Log.Error("Missing image_region field '" + field + "' in " + path, logger_prefix)
+			return false
+		if typeof(region[field]) != TYPE_INT && typeof(region[field]) != TYPE_FLOAT:
+			Log.Error("image_region field '" + field + "' must be numeric in " + path, logger_prefix)
+			return false
+
+	if float(region.x) < 0 || float(region.y) < 0:
+		Log.Error("Hero image_region position cannot be negative in " + path, logger_prefix)
+		return false
+	if float(region.width) <= 0 || float(region.height) <= 0:
+		Log.Error("Hero image_region dimensions must be greater than zero in " + path, logger_prefix)
+		return false
 	return true

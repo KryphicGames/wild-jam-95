@@ -68,7 +68,7 @@ layout_mode = 2
 [node name="Instructions" type="Label" parent="Content/Layout"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "Three heroes answer the call. Choose one to begin their legend."
+text = "In order to know who you will become, you must first answer who you are."
 horizontal_alignment = 1
 
 [node name="Cards" type="CenterContainer" parent="Content/Layout"]

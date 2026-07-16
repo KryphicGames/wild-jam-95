@@ -11,7 +11,13 @@ choices do not modify these files.
   "id": "scholar",
   "title": "The Scholar",
   "description": "A short description shown during hero selection.",
-  "image": "res://assets/textures/heroes/scholar.png",
+  "image": "res://assets/textures/ScholarIdleAnim.png",
+  "image_region": {
+    "x": 0,
+    "y": 0,
+    "width": 16,
+    "height": 16
+  },
   "starting_stats": {
     "gold": 15,
     "greed": 0,
@@ -29,6 +35,8 @@ choices do not modify these files.
 - `title`: Name displayed to the player.
 - `description`: Selection-screen description of the hero.
 - `image`: Godot resource path for a portrait. Use an empty string when unavailable.
+- `image_region`: Optional rectangular crop when `image` is a sprite sheet. Its
+  `x`, `y`, `width`, and `height` values are measured in source-image pixels.
 - `starting_stats`: Numeric starting values for `gold`, `greed`, and `popularity`.
 - `starting_flags`: Story flags copied into the new run. A `hero_<id>` flag lets
   event cards target a particular hero.
