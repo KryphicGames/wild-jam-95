@@ -22,6 +22,7 @@ config/icon="res://icon.svg"
 AudioManager="*uid://b8g2ebupteg6p"
 Log="*uid://bwujdqpdk7ajr"
 CardLoader="*uid://op8gu7mqf4mf"
+HeroLoader="*res://scripts/heroes/hero_loader.gd"
 
 [display]
 
