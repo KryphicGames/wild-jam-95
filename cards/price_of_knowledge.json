@@ -1,0 +1,69 @@
+{
+  "id": "price_of_knowledge",
+  "title": "The Price of Knowledge",
+  "description": "The witch smiles as she closes her ancient tome. \"Knowledge is never free,\" she whispers. \"Now... what will you offer in return?\"",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [
+      "accepted_bargain"
+    ],
+    "not_flags": []
+  },
+  "options": [
+    {
+      "id": "offer_gold",
+      "title": "Offer Your Gold",
+      "description": "Knowledge is valuable, but your soul is not for sale.",
+      "image": "",
+      "effects": {
+        "gold": -40,
+        "greed": -5,
+        "popularity": 5,
+        "add_flags": [
+          "paid_with_gold",
+          "witch_finale_ready"
+        ],
+        "remove_flags": [
+          "accepted_bargain"
+        ]
+      }
+    },
+    {
+      "id": "offer_loyalty",
+      "title": "Swear Your Loyalty",
+      "description": "You promise to serve the witch whenever she calls.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": 10,
+        "popularity": -10,
+        "add_flags": [
+          "swore_loyalty",
+          "witch_finale_ready"
+        ],
+        "remove_flags": [
+          "accepted_bargain"
+        ]
+      }
+    },
+    {
+      "id": "refuse_payment",
+      "title": "Refuse to Pay",
+      "description": "\"Knowledge should be free,\" you say. The witch's smile slowly fades.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": 5,
+        "popularity": -15,
+        "add_flags": [
+          "betrayed_witch",
+          "witch_finale_ready"
+        ],
+        "remove_flags": [
+          "accepted_bargain"
+        ]
+      }
+    }
+  ]
+}

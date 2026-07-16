@@ -1,0 +1,60 @@
+{
+  "id": "lost_ring",
+  "title": "The Lost Ring",
+  "description": "While walking along a quiet path, you notice a beautifully crafted gold ring lying in the dirt. Moments later, an elderly woman comes searching nearby, clearly distressed. She hasn't noticed you yet.",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [],
+    "not_flags": [
+      "active_quest"
+    ]
+  },
+  "options": [
+    {
+      "id": "return_ring",
+      "title": "Return the Ring",
+      "description": "Hand the ring back to its rightful owner.",
+      "image": "",
+      "effects": {
+        "gold": 10,
+        "greed": -10,
+        "popularity": 20,
+        "add_flags": [
+          "returned_ring"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "sell_ring",
+      "title": "Sell the Ring",
+      "description": "The old woman never has to know you found it.",
+      "image": "",
+      "effects": {
+        "gold": 50,
+        "greed": 15,
+        "popularity": -15,
+        "add_flags": [
+          "sold_ring"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "keep_ring",
+      "title": "Keep the Ring",
+      "description": "Perhaps it will prove useful someday.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": 5,
+        "popularity": -5,
+        "add_flags": [
+          "kept_ring"
+        ],
+        "remove_flags": []
+      }
+    }
+  ]
+}

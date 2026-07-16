@@ -1,0 +1,60 @@
+{
+  "id": "the_orphan",
+  "title": "The Orphan",
+  "description": "As rain begins to fall, you notice a young child sitting alone beneath a dead tree. Their clothes are torn, and they clutch an empty satchel. 'Have you seen my parents?' they ask quietly.",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [],
+    "not_flags": [
+      "active_quest"
+    ]
+  },
+  "options": [
+    {
+      "id": "help_child",
+      "title": "Help the Child",
+      "description": "Stay with the child until you can find someone who can care for them.",
+      "image": "",
+      "effects": {
+        "gold": -15,
+        "greed": -10,
+        "popularity": 25,
+        "add_flags": [
+          "helped_orphan"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "give_gold",
+      "title": "Give Them Some Gold",
+      "description": "You cannot stay, but perhaps a few coins will help them survive.",
+      "image": "",
+      "effects": {
+        "gold": -25,
+        "greed": -5,
+        "popularity": 15,
+        "add_flags": [
+          "gave_orphan_gold"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "ignore_child",
+      "title": "Walk Away",
+      "description": "You lower your head and continue down the road, leaving the child behind.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": 5,
+        "popularity": -20,
+        "add_flags": [
+          "ignored_orphan"
+        ],
+        "remove_flags": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "burned_merchant",
+  "title": "The Burned Merchant",
+  "description": "The merchant who bought the dragon egg finds you days later. His clothes are scorched, his wagon is destroyed, and an enormous shadow circles the mountains behind him.",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [
+      "sold_dragon_egg"
+    ],
+    "not_flags": []
+  },
+  "options": [
+    {
+      "id": "help_hunt_dragon",
+      "title": "Help Hunt the Dragon",
+      "description": "You accept responsibility and follow the creature into the mountains.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -5,
+        "popularity": 10,
+        "add_flags": [
+          "dragon_hunted",
+          "dragon_finale_ready"
+        ],
+        "remove_flags": [
+          "sold_dragon_egg"
+        ]
+      }
+    },
+    {
+      "id": "steal_map",
+      "title": "Steal His Map",
+      "description": "While the merchant pleads for help, you take the map showing where the dragon fled.",
+      "image": "",
+      "effects": {
+        "gold": 10,
+        "greed": 10,
+        "popularity": -5,
+        "add_flags": [
+          "dragon_pursued",
+          "dragon_finale_ready"
+        ],
+        "remove_flags": [
+          "sold_dragon_egg"
+        ]
+      }
+    },
+    {
+      "id": "demand_payment",
+      "title": "Demand More Payment",
+      "description": "You refuse to help unless the merchant pays you again.",
+      "image": "",
+      "effects": {
+        "gold": 25,
+        "greed": 15,
+        "popularity": -10,
+        "add_flags": [
+          "dragon_exploited",
+          "dragon_finale_ready"
+        ],
+        "remove_flags": [
+          "sold_dragon_egg"
+        ]
+      }
+    }
+  ]
+}

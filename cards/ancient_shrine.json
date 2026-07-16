@@ -1,0 +1,60 @@
+{
+  "id": "ancient_shrine",
+  "title": "Ancient Shrine",
+  "description": "Hidden deep within the woods stands a weathered shrine, untouched by time. Fresh flowers rest upon the altar despite no one being in sight. A faint warmth lingers in the air, as though something is quietly watching.",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [],
+    "not_flags": [
+      "active_quest"
+    ]
+  },
+  "options": [
+    {
+      "id": "leave_offering",
+      "title": "Leave an Offering",
+      "description": "Place a few coins upon the altar and quietly offer your respect.",
+      "image": "",
+      "effects": {
+        "gold": -20,
+        "greed": -10,
+        "popularity": 15,
+        "add_flags": [
+          "honored_shrine"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "search_shrine",
+      "title": "Search the Shrine",
+      "description": "There may be forgotten relics hidden beneath the old stones.",
+      "image": "",
+      "effects": {
+        "gold": 20,
+        "greed": 5,
+        "popularity": 0,
+        "add_flags": [
+          "searched_shrine"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "loot_shrine",
+      "title": "Loot the Shrine",
+      "description": "Sacred or not, valuables left unattended belong to whoever finds them.",
+      "image": "",
+      "effects": {
+        "gold": 50,
+        "greed": 20,
+        "popularity": -20,
+        "add_flags": [
+          "desecrated_shrine"
+        ],
+        "remove_flags": []
+      }
+    }
+  ]
+}

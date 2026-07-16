@@ -1,0 +1,99 @@
+{
+  "id": "world_tree_awakens",
+  "title": "The World Tree Awakens",
+  "description": "The earth trembles as an ancient tree erupts from beneath the ground. Its trunk is wider than a castle, its branches disappear into the clouds, and glowing roots consume everything in their path. A voice echoes from within, offering unimaginable power to anyone willing to claim it.",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [
+      "witch_finale_ready"
+    ],
+    "not_flags": []
+  },
+  "options": [
+    {
+      "id": "embrace_power",
+      "title": "Embrace Its Power",
+      "description": "Accept the World Tree's gift and become something greater than human.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": 20,
+        "popularity": -15,
+        "add_flags": [
+          "world_tree_chosen"
+        ],
+        "remove_flags": [
+          "active_quest",
+          "witch_quest",
+          "witch_finale_ready",
+          "accepted_bargain",
+          "stole_spellbook",
+          "refused_witch",
+          "paid_with_gold",
+          "swore_loyalty",
+          "betrayed_witch",
+          "forbidden_knowledge",
+          "sold_spellbook",
+          "destroyed_spellbook"
+        ]
+      }
+    },
+    {
+      "id": "seal_the_tree",
+      "title": "Seal the Tree",
+      "description": "Use everything you've learned to imprison the ancient power forever.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -10,
+        "popularity": 30,
+        "add_flags": [
+          "world_tree_guardian"
+        ],
+        "remove_flags": [
+          "active_quest",
+          "witch_quest",
+          "witch_finale_ready",
+          "accepted_bargain",
+          "stole_spellbook",
+          "refused_witch",
+          "paid_with_gold",
+          "swore_loyalty",
+          "betrayed_witch",
+          "forbidden_knowledge",
+          "sold_spellbook",
+          "destroyed_spellbook"
+        ]
+      }
+    },
+    {
+      "id": "walk_away_tree",
+      "title": "Walk Away",
+      "description": "Some powers were never meant to be controlled. You leave before the tree can tempt you further.",
+      "image": "",
+      "effects": {
+        "gold": 20,
+        "greed": 0,
+        "popularity": 15,
+        "add_flags": [
+          "world_tree_wanderer"
+        ],
+        "remove_flags": [
+          "active_quest",
+          "witch_quest",
+          "witch_finale_ready",
+          "accepted_bargain",
+          "stole_spellbook",
+          "refused_witch",
+          "paid_with_gold",
+          "swore_loyalty",
+          "betrayed_witch",
+          "forbidden_knowledge",
+          "sold_spellbook",
+          "destroyed_spellbook"
+        ]
+      }
+    }
+  ]
+}

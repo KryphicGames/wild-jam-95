@@ -1,0 +1,60 @@
+{
+  "id": "village_festival",
+  "title": "The Village Festival",
+  "description": "Colorful banners flutter overhead as music fills the village square. Merchants sell their wares, children laugh through the streets, and contests promise both glory and reward. It's a rare chance to enjoy life before the road calls again.",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [],
+    "not_flags": [
+      "active_quest"
+    ]
+  },
+  "options": [
+    {
+      "id": "join_contest",
+      "title": "Enter the Contest",
+      "description": "Test your skills against the village's finest.",
+      "image": "",
+      "effects": {
+        "gold": 25,
+        "greed": -5,
+        "popularity": 20,
+        "add_flags": [
+          "festival_champion"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "enjoy_festival",
+      "title": "Enjoy the Celebration",
+      "description": "Relax, share stories, and enjoy a peaceful evening.",
+      "image": "",
+      "effects": {
+        "gold": -10,
+        "greed": -5,
+        "popularity": 10,
+        "add_flags": [
+          "festival_guest"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "pickpocket_crowd",
+      "title": "Pickpocket the Crowd",
+      "description": "With everyone's attention elsewhere, heavy coin purses become easy targets.",
+      "image": "",
+      "effects": {
+        "gold": 40,
+        "greed": 20,
+        "popularity": -20,
+        "add_flags": [
+          "festival_thief"
+        ],
+        "remove_flags": []
+      }
+    }
+  ]
+}

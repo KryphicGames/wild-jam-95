@@ -1,0 +1,60 @@
+{
+  "id": "traveling_merchant",
+  "title": "Traveling Merchant",
+  "description": "A cheerful merchant waves you over to his colorful wagon. \"Rare goods! Honest prices!\" he proclaims, though his grin suggests otherwise.",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [],
+    "not_flags": [
+      "active_quest"
+    ]
+  },
+  "options": [
+    {
+      "id": "buy_supplies",
+      "title": "Buy Supplies",
+      "description": "Purchase useful provisions for the road ahead.",
+      "image": "",
+      "effects": {
+        "gold": -30,
+        "greed": -5,
+        "popularity": 5,
+        "add_flags": [
+          "traded_fairly"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "haggle_price",
+      "title": "Haggle",
+      "description": "Negotiate relentlessly until the merchant finally gives in.",
+      "image": "",
+      "effects": {
+        "gold": -10,
+        "greed": 5,
+        "popularity": 0,
+        "add_flags": [
+          "haggled_merchant"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "steal_goods",
+      "title": "Steal His Goods",
+      "description": "While the merchant is distracted, you quietly help yourself to his valuables.",
+      "image": "",
+      "effects": {
+        "gold": 40,
+        "greed": 20,
+        "popularity": -20,
+        "add_flags": [
+          "robbed_merchant"
+        ],
+        "remove_flags": []
+      }
+    }
+  ]
+}
