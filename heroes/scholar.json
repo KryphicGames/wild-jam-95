@@ -2,7 +2,13 @@
   "id": "scholar",
   "title": "The Scholar",
   "description": "Years spent studying ancient texts have taught you that knowledge is often more valuable than gold. Though inexperienced on the road, your reputation as a learned scholar opens doors others never notice.",
-  "image": "",
+  "image": "res://assets/textures/ScholarIdleAnim.png",
+  "image_region": {
+    "x": 0,
+    "y": 0,
+    "width": 16,
+    "height": 16
+  },
   "starting_stats": {
     "gold": 15,
     "greed": 0,
