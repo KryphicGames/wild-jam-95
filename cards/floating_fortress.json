@@ -4,6 +4,7 @@
   "description": "Without warning, the sky darkens. A fortress the size of a mountain descends from the clouds, casting its shadow across the kingdom. Panic spreads as people flee in every direction. Whatever happened to the King suddenly seems insignificant.",
   "image": "",
   "repeatable": false,
+  "card_type": "quest_end",
   "trigger": {
     "flags": [
       "kingdom_finale_ready"

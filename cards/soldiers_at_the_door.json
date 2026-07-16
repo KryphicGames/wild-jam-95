@@ -4,6 +4,7 @@
   "description": "Several days after refusing the King's request, armored soldiers arrive at your home. Their captain explains that the kingdom is falling into chaos and that your decision has not gone unnoticed.",
   "image": "",
   "repeatable": false,
+  "card_type": "quest_step",
   "trigger": {
     "flags": [
       "refused_summons"

@@ -4,6 +4,7 @@
   "description": "That night, the stolen spellbook begins whispering your name. Its pages turn by themselves, revealing secrets no mortal was meant to know.",
   "image": "",
   "repeatable": false,
+  "card_type": "quest_step",
   "trigger": {
     "flags": [
       "stole_spellbook"

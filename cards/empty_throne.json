@@ -4,6 +4,7 @@
   "description": "You arrive at the royal castle only to find the throne abandoned. The court is in chaos. Some nobles urge you to support the young heir, while others whisper that the kingdom needs a stronger ruler.",
   "image": "",
   "repeatable": false,
+  "card_type": "quest_step",
   "trigger": {
     "flags": [
       "accepted_summons"

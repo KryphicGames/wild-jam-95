@@ -4,6 +4,7 @@
   "description": "As you rest beside your campfire, faint cracking echoes through the darkness. The egg begins to split open. A tiny dragon struggles to free itself, looking to you as the first creature it sees.",
   "image": "",
   "repeatable": false,
+  "card_type": "quest_step",
   "trigger": {
     "flags": [
       "kept_dragon_egg"

@@ -4,11 +4,10 @@
   "description": "As rain begins to fall, you notice a young child sitting alone beneath a dead tree. Their clothes are torn, and they clutch an empty satchel. 'Have you seen my parents?' they ask quietly.",
   "image": "",
   "repeatable": false,
+  "card_type": "standalone",
   "trigger": {
     "flags": [],
-    "not_flags": [
-      "active_quest"
-    ]
+    "not_flags": []
   },
   "options": [
     {

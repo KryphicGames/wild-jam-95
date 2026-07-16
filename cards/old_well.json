@@ -4,11 +4,10 @@
   "description": "An ancient stone well stands alone beside the road. As you peer into its depths, you hear a faint voice whisper, 'Make a wish... but every wish has a price.'",
   "image": "",
   "repeatable": false,
+  "card_type": "standalone",
   "trigger": {
     "flags": [],
-    "not_flags": [
-      "active_quest"
-    ]
+    "not_flags": []
   },
   "options": [
     {

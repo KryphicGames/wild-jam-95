@@ -4,11 +4,10 @@
   "description": "Half-buried beneath the earth lies the skeleton of a giant. Its ribcage rises higher than the surrounding trees, and an ancient weapon still rests in its massive hand.",
   "image": "",
   "repeatable": false,
+  "card_type": "standalone",
   "trigger": {
     "flags": [],
-    "not_flags": [
-      "active_quest"
-    ]
+    "not_flags": []
   },
   "options": [
     {

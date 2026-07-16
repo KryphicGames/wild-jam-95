@@ -4,6 +4,7 @@
   "description": "The earth trembles as an ancient tree erupts from beneath the ground. Its trunk is wider than a castle, its branches disappear into the clouds, and glowing roots consume everything in their path. A voice echoes from within, offering unimaginable power to anyone willing to claim it.",
   "image": "",
   "repeatable": false,
+  "card_type": "quest_end",
   "trigger": {
     "flags": [
       "witch_finale_ready"

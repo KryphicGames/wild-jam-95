@@ -4,6 +4,7 @@
   "description": "The witch smiles as she closes her ancient tome. \"Knowledge is never free,\" she whispers. \"Now... what will you offer in return?\"",
   "image": "",
   "repeatable": false,
+  "card_type": "quest_step",
   "trigger": {
     "flags": [
       "accepted_bargain"

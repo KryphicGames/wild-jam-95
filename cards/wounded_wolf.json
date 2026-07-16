@@ -4,11 +4,10 @@
   "description": "A wounded wolf lies beside the forest path. An arrow protrudes from its shoulder, yet it growls weakly as you approach. It could become a loyal companion... or an easy target.",
   "image": "",
   "repeatable": false,
+  "card_type": "standalone",
   "trigger": {
     "flags": [],
-    "not_flags": [
-      "active_quest"
-    ]
+    "not_flags": []
   },
   "options": [
     {

@@ -4,6 +4,7 @@
   "description": "The merchant who bought the dragon egg finds you days later. His clothes are scorched, his wagon is destroyed, and an enormous shadow circles the mountains behind him.",
   "image": "",
   "repeatable": false,
+  "card_type": "quest_step",
   "trigger": {
     "flags": [
       "sold_dragon_egg"

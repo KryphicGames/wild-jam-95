@@ -4,11 +4,10 @@
   "description": "The only bridge across a raging river has collapsed. Several weary travelers stand nearby, unsure how to continue. Time is running short, and every choice comes with a cost.",
   "image": "",
   "repeatable": false,
+  "card_type": "standalone",
   "trigger": {
     "flags": [],
-    "not_flags": [
-      "active_quest"
-    ]
+    "not_flags": []
   },
   "options": [
     {

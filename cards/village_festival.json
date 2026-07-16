@@ -4,11 +4,10 @@
   "description": "Colorful banners flutter overhead as music fills the village square. Merchants sell their wares, children laugh through the streets, and contests promise both glory and reward. It's a rare chance to enjoy life before the road calls again.",
   "image": "",
   "repeatable": false,
+  "card_type": "standalone",
   "trigger": {
     "flags": [],
-    "not_flags": [
-      "active_quest"
-    ]
+    "not_flags": []
   },
   "options": [
     {

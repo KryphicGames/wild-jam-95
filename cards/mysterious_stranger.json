@@ -4,11 +4,10 @@
   "description": "As dusk settles over the road, a hooded traveler approaches without a sound. They silently hold out a small wooden box before disappearing into the fog. The box is warm to the touch.",
   "image": "",
   "repeatable": false,
+  "card_type": "standalone",
   "trigger": {
     "flags": [],
-    "not_flags": [
-      "active_quest"
-    ]
+    "not_flags": []
   },
   "options": [
     {
