@@ -1,0 +1,67 @@
+{
+  "id": "dragon_egg",
+  "title": "The Dragon Egg",
+  "description": "Deep inside an abandoned cave, you discover an enormous egg resting in a nest of scorched bones. Its shell is warm, and something inside is moving.",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [],
+    "not_flags": [
+      "active_quest"
+    ]
+  },
+  "options": [
+    {
+      "id": "take_egg",
+      "title": "Take the Egg",
+      "description": "Carry the mysterious egg with you and discover what lies inside.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": 0,
+        "popularity": 0,
+        "add_flags": [
+          "active_quest",
+          "dragon_quest",
+          "kept_dragon_egg"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "sell_egg",
+      "title": "Sell the Egg",
+      "description": "Find a wealthy buyer before whatever is inside decides to hatch.",
+      "image": "",
+      "effects": {
+        "gold": 30,
+        "greed": 10,
+        "popularity": 0,
+        "add_flags": [
+          "active_quest",
+          "dragon_quest",
+          "sold_dragon_egg"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "destroy_egg",
+      "title": "Destroy the Egg",
+      "description": "Crack the shell before whatever is inside can threaten the world.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -5,
+        "popularity": 10,
+        "add_flags": [
+          "active_quest",
+          "dragon_quest",
+          "destroyed_dragon_egg",
+          "dragon_finale_ready"
+        ],
+        "remove_flags": []
+      }
+    }
+  ]
+}

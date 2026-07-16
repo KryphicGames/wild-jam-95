@@ -1,0 +1,67 @@
+{
+  "id": "royal_messenger",
+  "title": "The Royal Messenger",
+  "description": "A royal messenger arrives on horseback, carrying a sealed letter bearing the King's crest. The kingdom requests your presence immediately. The messenger refuses to explain why.",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [],
+    "not_flags": [
+      "active_quest"
+    ]
+  },
+  "options": [
+    {
+      "id": "accept_summons",
+      "title": "Answer the King's Call",
+      "description": "Duty comes before all else.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -5,
+        "popularity": 15,
+        "add_flags": [
+          "active_quest",
+          "kingdom_quest",
+          "accepted_summons"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "refuse_summons",
+      "title": "Refuse the Summons",
+      "description": "The King's problems are not your concern.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": 5,
+        "popularity": -10,
+        "add_flags": [
+          "active_quest",
+          "kingdom_quest",
+          "refused_summons"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "demand_payment",
+      "title": "Demand Compensation",
+      "description": "You'll gladly help... for the right price.",
+      "image": "",
+      "effects": {
+        "gold": 25,
+        "greed": 15,
+        "popularity": -5,
+        "add_flags": [
+          "active_quest",
+          "kingdom_quest",
+          "paid_summons",
+          "accepted_summons"
+        ],
+        "remove_flags": []
+      }
+    }
+  ]
+}

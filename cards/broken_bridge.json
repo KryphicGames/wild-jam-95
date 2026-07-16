@@ -1,0 +1,60 @@
+{
+  "id": "broken_bridge",
+  "title": "The Broken Bridge",
+  "description": "The only bridge across a raging river has collapsed. Several weary travelers stand nearby, unsure how to continue. Time is running short, and every choice comes with a cost.",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [],
+    "not_flags": [
+      "active_quest"
+    ]
+  },
+  "options": [
+    {
+      "id": "repair_bridge",
+      "title": "Repair the Bridge",
+      "description": "Spend your time and supplies rebuilding the crossing for everyone.",
+      "image": "",
+      "effects": {
+        "gold": -20,
+        "greed": -5,
+        "popularity": 20,
+        "add_flags": [
+          "repaired_bridge"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "pay_boatman",
+      "title": "Hire the Boatman",
+      "description": "A nearby ferryman offers safe passage... for a price.",
+      "image": "",
+      "effects": {
+        "gold": -35,
+        "greed": 0,
+        "popularity": 5,
+        "add_flags": [
+          "crossed_by_boat"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "rob_travelers",
+      "title": "Rob the Stranded Travelers",
+      "description": "With no escape, the stranded travelers are easy targets.",
+      "image": "",
+      "effects": {
+        "gold": 50,
+        "greed": 20,
+        "popularity": -20,
+        "add_flags": [
+          "robbed_travelers"
+        ],
+        "remove_flags": []
+      }
+    }
+  ]
+}

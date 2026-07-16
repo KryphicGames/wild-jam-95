@@ -1,0 +1,69 @@
+{
+  "id": "dragon_hatching",
+  "title": "Cracks in the Night",
+  "description": "As you rest beside your campfire, faint cracking echoes through the darkness. The egg begins to split open. A tiny dragon struggles to free itself, looking to you as the first creature it sees.",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [
+      "kept_dragon_egg"
+    ],
+    "not_flags": []
+  },
+  "options": [
+    {
+      "id": "protect_hatchling",
+      "title": "Protect the Hatchling",
+      "description": "You shelter the frightened dragon and earn its trust.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -5,
+        "popularity": 10,
+        "add_flags": [
+          "dragon_protected",
+          "dragon_finale_ready"
+        ],
+        "remove_flags": [
+          "kept_dragon_egg"
+        ]
+      }
+    },
+    {
+      "id": "train_hatchling",
+      "title": "Train the Dragon",
+      "description": "You begin raising the dragon to become a powerful companion.",
+      "image": "",
+      "effects": {
+        "gold": -10,
+        "greed": 5,
+        "popularity": 5,
+        "add_flags": [
+          "dragon_trained",
+          "dragon_finale_ready"
+        ],
+        "remove_flags": [
+          "kept_dragon_egg"
+        ]
+      }
+    },
+    {
+      "id": "abandon_hatchling",
+      "title": "Leave It Behind",
+      "description": "The dragon watches as you walk away into the night.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": 0,
+        "popularity": -10,
+        "add_flags": [
+          "dragon_abandoned",
+          "dragon_finale_ready"
+        ],
+        "remove_flags": [
+          "kept_dragon_egg"
+        ]
+      }
+    }
+  ]
+}

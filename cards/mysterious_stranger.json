@@ -1,0 +1,60 @@
+{
+  "id": "mysterious_stranger",
+  "title": "A Mysterious Stranger",
+  "description": "As dusk settles over the road, a hooded traveler approaches without a sound. They silently hold out a small wooden box before disappearing into the fog. The box is warm to the touch.",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [],
+    "not_flags": [
+      "active_quest"
+    ]
+  },
+  "options": [
+    {
+      "id": "open_box",
+      "title": "Open the Box",
+      "description": "Curiosity gets the better of you.",
+      "image": "",
+      "effects": {
+        "gold": 50,
+        "greed": 10,
+        "popularity": 0,
+        "add_flags": [
+          "opened_mysterious_box"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "return_box",
+      "title": "Search for the Stranger",
+      "description": "Perhaps the box was never meant for you.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -5,
+        "popularity": 20,
+        "add_flags": [
+          "returned_mysterious_box"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "leave_box",
+      "title": "Leave It Alone",
+      "description": "Some mysteries are better left unsolved.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -5,
+        "popularity": 10,
+        "add_flags": [
+          "ignored_mysterious_box"
+        ],
+        "remove_flags": []
+      }
+    }
+  ]
+}

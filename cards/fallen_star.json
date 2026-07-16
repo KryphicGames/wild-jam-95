@@ -1,0 +1,60 @@
+{
+  "id": "fallen_star",
+  "title": "The Fallen Star",
+  "description": "A brilliant streak of light tears across the night sky before crashing beyond the nearby hills. By the time you arrive, a glowing stone rests in the center of a smoking crater, warm enough to melt the earth beneath it.",
+  "image": "",
+  "repeatable": false,
+  "trigger": {
+    "flags": [],
+    "not_flags": [
+      "active_quest"
+    ]
+  },
+  "options": [
+    {
+      "id": "take_star",
+      "title": "Take the Star",
+      "description": "The glowing stone could be worth a fortune—or possess unimaginable power.",
+      "image": "",
+      "effects": {
+        "gold": 30,
+        "greed": 10,
+        "popularity": 0,
+        "add_flags": [
+          "claimed_fallen_star"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "study_star",
+      "title": "Study It",
+      "description": "Instead of disturbing it, you carefully observe the strange object and record what you discover.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -5,
+        "popularity": 15,
+        "add_flags": [
+          "studied_fallen_star"
+        ],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "leave_star",
+      "title": "Leave It Alone",
+      "description": "Some things fall from the heavens for reasons beyond mortal understanding.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -5,
+        "popularity": 5,
+        "add_flags": [
+          "left_fallen_star"
+        ],
+        "remove_flags": []
+      }
+    }
+  ]
+}
