@@ -69,21 +69,21 @@ offset_top = 58.0
 offset_right = 894.0
 offset_bottom = 293.0
 
-[node name="TextureRect2" parent="." unique_id=892738914 instance=ExtResource("8_gee14")]
+[node name="RightOption" parent="." unique_id=892738914 instance=ExtResource("8_gee14")]
 layout_mode = 0
 offset_left = 780.0
 offset_top = 340.0
 offset_right = 981.0
 offset_bottom = 598.4674
 
-[node name="TextureRect3" parent="." unique_id=834786675 instance=ExtResource("9_0tnpc")]
+[node name="MiddleOption" parent="." unique_id=834786675 instance=ExtResource("9_0tnpc")]
 layout_mode = 0
 offset_left = 541.0
 offset_top = 338.0
 offset_right = 724.0
 offset_bottom = 598.7612
 
-[node name="TextureRect4" parent="." unique_id=355224597 instance=ExtResource("10_vtaks")]
+[node name="LeftOption" parent="." unique_id=355224597 instance=ExtResource("10_vtaks")]
 layout_mode = 0
 offset_left = 297.0
 offset_top = 343.0
@@ -98,3 +98,4 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2

@@ -1,22 +1,64 @@
-[gd_scene format=3 uid="uid://b3sjc2pkjs1ot"]
+[gd_scene load_steps=3 format=3 uid="uid://b3sjc2pkjs1ot"]
 
-[ext_resource type="Texture2D" uid="uid://bcr1k4xtylba2" path="res://assets/textures/hero_card.png" id="1_ub35w"]
+[ext_resource type="Texture2D" uid="uid://bcr1k4xtylba2" path="res://assets/textures/hero_card.png" id="1_texture"]
+[ext_resource type="Script" path="res://scripts/components/hero_card_view.gd" id="2_script"]
 
-[node name="TextureRect" type="TextureRect" unique_id=363865671]
+[node name="HeroCard" type="TextureRect" unique_id=363865671]
 offset_right = 804.0
 offset_bottom = 949.0
-texture = ExtResource("1_ub35w")
+texture = ExtResource("1_texture")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("2_script")
 
-[node name="Title" type="RichTextLabel" parent="." unique_id=1868750627]
+[node name="Margin" type="MarginContainer" parent="."]
 layout_mode = 1
-offset_right = 90.0
-offset_bottom = 40.0
-text = "HERO CARD"
-fit_content = true
-scroll_active = false
-autowrap_mode = 0
-autowrap_trim_flags = 0
-shortcut_keys_enabled = false
-justification_flags = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="Contents" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Title" type="Label" parent="Margin/Contents"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "Hero"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="Margin/Contents"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Stats" type="VBoxContainer" parent="Margin/Contents"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Gold" type="Label" parent="Margin/Contents/Stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Gold: 0"
+horizontal_alignment = 1
+
+[node name="Greed" type="Label" parent="Margin/Contents/Stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Greed: 0"
+horizontal_alignment = 1
+
+[node name="Popularity" type="Label" parent="Margin/Contents/Stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Popularity: 0"
+horizontal_alignment = 1
