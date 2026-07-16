@@ -1,61 +1,59 @@
-[gd_scene format=3 uid="uid://dxwvti6pg4hpy"]
+[gd_scene load_steps=4 format=3 uid="uid://dxwvti6pg4hpy"]
 
-[ext_resource type="Texture2D" uid="uid://c6s6l01n5fytp" path="res://assets/textures/event_card.png" id="1_lwdr4"]
-[ext_resource type="Texture2D" uid="uid://nmakvgr7t5ry" path="res://assets/textures/bg.png" id="2_m2s1q"]
+[ext_resource type="Texture2D" uid="uid://c6s6l01n5fytp" path="res://assets/textures/event_card.png" id="1_texture"]
+[ext_resource type="Script" path="res://scripts/components/event_card_view.gd" id="2_script"]
+[ext_resource type="PackedScene" path="res://components/card_back.tscn" id="3_back"]
 
 [node name="EventCard" type="TextureRect" unique_id=363865671]
 offset_right = 804.0
 offset_bottom = 453.0
-texture = ExtResource("1_lwdr4")
+texture = ExtResource("1_texture")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("2_script")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=158974402]
+[node name="Margin" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 16
+theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 16
+theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 16
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=659792534]
+[node name="Contents" type="VBoxContainer" parent="Margin"]
 layout_mode = 2
+theme_override_constants/separation = 8
 
-[node name="Title" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=1985353694]
+[node name="Title" type="RichTextLabel" parent="Margin/Contents"]
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-bbcode_enabled = true
-text = "A wandering merchant waves you over."
+theme_override_font_sizes/normal_font_size = 22
+text = "Event Title"
 fit_content = true
 scroll_active = false
-autowrap_trim_flags = 0
-shortcut_keys_enabled = false
 horizontal_alignment = 1
-justification_flags = 0
 
-[node name="Image" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=1716903211]
+[node name="Image" type="TextureRect" parent="Margin/Contents"]
+visible = false
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("2_m2s1q")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Description" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=652467965]
+[node name="Description" type="RichTextLabel" parent="Margin/Contents"]
+custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
-theme_override_constants/margin_left = 16
-theme_override_constants/margin_right = 16
-
-[node name="Label" type="RichTextLabel" parent="MarginContainer/VBoxContainer/Description" unique_id=1664703654]
-layout_mode = 2
+size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-bbcode_enabled = true
-text = "He has rare items, but his prices seem unusual high."
-fit_content = true
+theme_override_font_sizes/normal_font_size = 16
+text = "Event description"
+fit_content = false
 scroll_active = false
-autowrap_trim_flags = 0
-shortcut_keys_enabled = false
-justification_flags = 0
+
+[node name="CardBack" parent="." instance=ExtResource("3_back")]
+layout_mode = 1

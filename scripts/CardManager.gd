@@ -1,5 +1,7 @@
 extends Node
 
+const SPENDABLE_EFFECT_KEYS := ["gold"]
+
 @export var loggerPrefix = "CardLoader"
 var cards: Array = []
 var used_cards: Array = []
@@ -70,6 +72,17 @@ func can_trigger(game, card: Dictionary) -> bool:
 				if value > trigger.stats[stat].max:
 					return false
 	return true
+
+
+func can_apply_effects(game, effects: Dictionary) -> bool:
+	for stat_name in SPENDABLE_EFFECT_KEYS:
+		var change := int(effects.get(stat_name, 0))
+		if change >= 0:
+			continue
+		if int(game.get(stat_name)) < abs(change):
+			return false
+	return true
+
 
 func apply_effects(game, effects: Dictionary):
 	for key in effects.keys():
