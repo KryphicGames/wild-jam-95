@@ -1,13 +1,13 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="Texture2D" uid="uid://bcr1k4xtylba2" path="res://assets/textures/hero_card.png" id="1_texture"]
 [ext_resource type="Script" path="res://scripts/components/hero_choice_card.gd" id="2_script"]
 [ext_resource type="PackedScene" path="res://components/card_back.tscn" id="3_back"]
+[ext_resource type="Script" path="res://scripts/components/hero_portrait_view.gd" id="4_portrait"]
 
 [node name="HeroChoiceCard" type="TextureRect"]
 custom_minimum_size = Vector2(320, 378)
 clip_contents = true
-mouse_default_cursor_shape = 2
 focus_mode = 2
 texture = ExtResource("1_texture")
 expand_mode = 1
@@ -38,6 +38,7 @@ size_flags_horizontal = 4
 texture_filter = 1
 expand_mode = 3
 stretch_mode = 5
+script = ExtResource("4_portrait")
 
 [node name="Title" type="Label" parent="Margin/Contents"]
 layout_mode = 2

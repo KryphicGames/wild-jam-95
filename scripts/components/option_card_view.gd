@@ -1,5 +1,5 @@
 class_name OptionCardView
-extends AnimatedCardView
+extends SelectableAnimatedCardView
 
 signal option_selected(option_id: String)
 
@@ -13,15 +13,14 @@ const STAT_DISPLAY_NAMES := {
 @onready var option_image: TextureRect = $Margin/Contents/Image
 @onready var description_label: RichTextLabel = $Margin/Contents/Description
 @onready var effects_label: Label = $Margin/Contents/Effects
-@onready var select_button: Button = $Margin/Contents/Select
-
 var _option_id := ""
 var _is_available := false
 var _input_enabled := false
 
 
 func _ready() -> void:
-	select_button.pressed.connect(_on_select_pressed)
+	super()
+	selection_requested.connect(_on_selection_requested)
 
 
 func present(option: Dictionary, is_available: bool) -> void:
@@ -33,7 +32,7 @@ func present(option: Dictionary, is_available: bool) -> void:
 	effects_label.text = _format_effects(option.get("effects", {}))
 	_set_image(str(option.get("image", "")))
 	tooltip_text = "" if _is_available else "You do not have enough of one or more stats to choose this."
-	_update_button_state()
+	_update_selection_state()
 	show()
 
 
@@ -45,23 +44,25 @@ func clear_option() -> void:
 	option_image.texture = null
 	self_modulate = Color.WHITE
 	tooltip_text = ""
-	_update_button_state()
+	_update_selection_state()
 	hide()
 
 
 func set_input_enabled(enabled: bool) -> void:
 	_input_enabled = enabled
-	_update_button_state()
+	_update_selection_state()
 
 
-func _on_select_pressed() -> void:
-	if _option_id.is_empty() || select_button.disabled:
+func _on_selection_requested() -> void:
+	if _option_id.is_empty() || !is_selection_enabled():
 		return
 	option_selected.emit(_option_id)
 
 
-func _update_button_state() -> void:
-	select_button.disabled = !_input_enabled || !_is_available || _option_id.is_empty()
+func _update_selection_state() -> void:
+	set_selection_enabled(
+		_input_enabled && _is_available && !_option_id.is_empty()
+	)
 
 
 func _get_front_modulate() -> Color:
