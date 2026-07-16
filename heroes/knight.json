@@ -2,7 +2,13 @@
   "id": "knight",
   "title": "The Knight",
   "description": "Bound by duty and honor, you have spent your life protecting the innocent and serving the realm. People recognize your crest and place their trust in you, though such expectations can become a burden.",
-  "image": "",
+  "image": "res://assets/textures/pixilart-sprite (45).png",
+  "image_region": {
+    "x": 0,
+    "y": 0,
+    "width": 16,
+    "height": 16
+  },
   "starting_stats": {
     "gold": 30,
     "greed": -5,

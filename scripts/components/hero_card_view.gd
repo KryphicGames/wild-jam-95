@@ -1,6 +1,7 @@
 class_name HeroCardView
 extends TextureRect
 
+@onready var portrait: HeroPortraitView = $Margin/Contents/Portrait
 @onready var title_label: Label = $Margin/Contents/Title
 @onready var gold_label: Label = $Margin/Contents/Stats/Gold
 @onready var greed_label: Label = $Margin/Contents/Stats/Greed
@@ -9,6 +10,7 @@ extends TextureRect
 
 func present(hero: Dictionary, gold: int, greed: int, popularity: int) -> void:
 	title_label.text = str(hero.get("title", "Hero"))
+	portrait.present(hero)
 	refresh_stats(gold, greed, popularity)
 
 
