@@ -1,0 +1,14 @@
+{
+  "id": "merchant",
+  "title": "The Merchant",
+  "description": "You have traveled farther than most, buying low, selling high, and always recognizing a good opportunity. Fortune favors those willing to take a calculated risk.",
+  "image": "",
+  "starting_stats": {
+    "gold": 60,
+    "greed": 10,
+    "popularity": -5
+  },
+  "starting_flags": [
+    "hero_merchant"
+  ]
+}
