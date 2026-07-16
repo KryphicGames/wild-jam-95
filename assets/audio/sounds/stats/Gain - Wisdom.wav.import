@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bec5s4d3wuhak"
+path="res://.godot/imported/Gain - Wisdom.wav-94814fe8a57af2260d157fcb0f9e5ab3.sample"
+
+[deps]
+
+source_file="res://assets/audio/sounds/stats/Gain - Wisdom.wav"
+dest_files=["res://.godot/imported/Gain - Wisdom.wav-94814fe8a57af2260d157fcb0f9e5ab3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

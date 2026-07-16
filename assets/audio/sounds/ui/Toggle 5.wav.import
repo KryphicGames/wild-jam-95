@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dacj0w2w6yadp"
+path="res://.godot/imported/Toggle 5.wav-4f76dd2a115e60b3c9703a0fb3d608fb.sample"
+
+[deps]
+
+source_file="res://assets/audio/sounds/ui/Toggle 5.wav"
+dest_files=["res://.godot/imported/Toggle 5.wav-4f76dd2a115e60b3c9703a0fb3d608fb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

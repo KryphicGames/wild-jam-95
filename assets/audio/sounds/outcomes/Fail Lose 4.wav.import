@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bpmwkc3h5jnov"
+path="res://.godot/imported/Fail Lose 4.wav-b931f1c65297cc2b6bf8424d50e2ca7f.sample"
+
+[deps]
+
+source_file="res://assets/audio/sounds/outcomes/Fail Lose 4.wav"
+dest_files=["res://.godot/imported/Fail Lose 4.wav-b931f1c65297cc2b6bf8424d50e2ca7f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
