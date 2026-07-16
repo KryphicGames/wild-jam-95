@@ -4,11 +4,10 @@
   "description": "A cheerful merchant waves you over to his colorful wagon. \"Rare goods! Honest prices!\" he proclaims, though his grin suggests otherwise.",
   "image": "",
   "repeatable": false,
+  "card_type": "standalone",
   "trigger": {
     "flags": [],
-    "not_flags": [
-      "active_quest"
-    ]
+    "not_flags": []
   },
   "options": [
     {

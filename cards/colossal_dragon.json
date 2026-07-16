@@ -4,6 +4,7 @@
   "description": "The mountain trembles as an enormous dragon rises above the clouds. Its shadow covers the valley, and its burning eyes settle upon you.",
   "image": "",
   "repeatable": false,
+  "card_type": "quest_end",
   "trigger": {
     "flags": [
       "dragon_finale_ready"

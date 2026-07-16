@@ -4,11 +4,10 @@
   "description": "Deep within the forest, an old witch stirs a bubbling cauldron. Without looking up, she smiles and says, \"I've been expecting you.\" She offers knowledge, but every gift has a price.",
   "image": "",
   "repeatable": false,
+  "card_type": "quest_start",
   "trigger": {
     "flags": [],
-    "not_flags": [
-      "active_quest"
-    ]
+    "not_flags": []
   },
   "options": [
     {

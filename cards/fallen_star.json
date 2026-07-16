@@ -4,11 +4,10 @@
   "description": "A brilliant streak of light tears across the night sky before crashing beyond the nearby hills. By the time you arrive, a glowing stone rests in the center of a smoking crater, warm enough to melt the earth beneath it.",
   "image": "",
   "repeatable": false,
+  "card_type": "standalone",
   "trigger": {
     "flags": [],
-    "not_flags": [
-      "active_quest"
-    ]
+    "not_flags": []
   },
   "options": [
     {

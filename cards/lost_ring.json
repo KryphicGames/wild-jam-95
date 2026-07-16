@@ -4,11 +4,10 @@
   "description": "While walking along a quiet path, you notice a beautifully crafted gold ring lying in the dirt. Moments later, an elderly woman comes searching nearby, clearly distressed. She hasn't noticed you yet.",
   "image": "",
   "repeatable": false,
+  "card_type": "standalone",
   "trigger": {
     "flags": [],
-    "not_flags": [
-      "active_quest"
-    ]
+    "not_flags": []
   },
   "options": [
     {

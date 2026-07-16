@@ -4,11 +4,10 @@
   "description": "As you pass through a narrow mountain pass, desperate cries echo from below. A traveler dangles from the edge of a cliff, desperately clinging to a loose root. They won't survive much longer.",
   "image": "",
   "repeatable": false,
+  "card_type": "standalone",
   "trigger": {
     "flags": [],
-    "not_flags": [
-      "active_quest"
-    ]
+    "not_flags": []
   },
   "options": [
     {

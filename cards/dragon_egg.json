@@ -4,11 +4,10 @@
   "description": "Deep inside an abandoned cave, you discover an enormous egg resting in a nest of scorched bones. Its shell is warm, and something inside is moving.",
   "image": "",
   "repeatable": false,
+  "card_type": "quest_start",
   "trigger": {
     "flags": [],
-    "not_flags": [
-      "active_quest"
-    ]
+    "not_flags": []
   },
   "options": [
     {

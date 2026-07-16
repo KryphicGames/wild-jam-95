@@ -4,11 +4,10 @@
   "description": "A royal messenger arrives on horseback, carrying a sealed letter bearing the King's crest. The kingdom requests your presence immediately. The messenger refuses to explain why.",
   "image": "",
   "repeatable": false,
+  "card_type": "quest_start",
   "trigger": {
     "flags": [],
-    "not_flags": [
-      "active_quest"
-    ]
+    "not_flags": []
   },
   "options": [
     {

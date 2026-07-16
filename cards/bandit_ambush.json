@@ -4,11 +4,10 @@
   "description": "As you travel along a quiet forest road, masked bandits emerge from the trees. Their leader smirks and points a sword toward your pack. \"Your gold or your life,\" he says.",
   "image": "",
   "repeatable": false,
+  "card_type": "standalone",
   "trigger": {
     "flags": [],
-    "not_flags": [
-      "active_quest"
-    ]
+    "not_flags": []
   },
   "options": [
     {

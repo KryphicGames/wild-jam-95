@@ -1,5 +1,16 @@
 extends Node
 
+const ACTIVE_QUEST_FLAG := "active_quest"
+const CARD_TYPE_STANDALONE := "standalone"
+const CARD_TYPE_QUEST_START := "quest_start"
+const CARD_TYPE_QUEST_STEP := "quest_step"
+const CARD_TYPE_QUEST_END := "quest_end"
+const SUPPORTED_CARD_TYPES := [
+	CARD_TYPE_STANDALONE,
+	CARD_TYPE_QUEST_START,
+	CARD_TYPE_QUEST_STEP,
+	CARD_TYPE_QUEST_END
+]
 const SPENDABLE_EFFECT_KEYS := ["gold"]
 
 @export var loggerPrefix = "CardLoader"
@@ -28,7 +39,13 @@ func load_cards():
 		if json.parse(text) != OK:
 			Log.Error("Invalid JSON: " + path, loggerPrefix)
 			continue
-		cards.append(json.data)
+		if typeof(json.data) != TYPE_DICTIONARY:
+			Log.Error("Card file must contain a JSON object: " + path, loggerPrefix)
+			continue
+		var card: Dictionary = json.data
+		if !_has_valid_card_type(card, path):
+			continue
+		cards.append(card)
 	dir.list_dir_end()
 
 	Log.Info("Loaded " + str(cards.size()) + " cards.", loggerPrefix)
@@ -49,6 +66,8 @@ func get_random_card(game) -> Dictionary:
 
 
 func can_trigger(game, card: Dictionary) -> bool:
+	if !_can_draw_card_type(game, str(card.card_type)):
+		return false
 	if !card.has("trigger"):
 		return true
 	var trigger = card.trigger
@@ -72,6 +91,27 @@ func can_trigger(game, card: Dictionary) -> bool:
 				if value > trigger.stats[stat].max:
 					return false
 	return true
+
+
+func _has_valid_card_type(card: Dictionary, path: String) -> bool:
+	if !card.has("card_type") || typeof(card.card_type) != TYPE_STRING:
+		Log.Error("Card must define a string card_type: " + path, loggerPrefix)
+		return false
+	if !SUPPORTED_CARD_TYPES.has(card.card_type):
+		Log.Error("Unsupported card_type '" + str(card.card_type) + "' in " + path, loggerPrefix)
+		return false
+	return true
+
+
+func _can_draw_card_type(game, card_type: String) -> bool:
+	var quest_is_active: bool = game.flags.has(ACTIVE_QUEST_FLAG)
+	match card_type:
+		CARD_TYPE_QUEST_START:
+			return !quest_is_active
+		CARD_TYPE_QUEST_STEP, CARD_TYPE_QUEST_END:
+			return quest_is_active
+		_:
+			return true
 
 
 func can_apply_effects(game, effects: Dictionary) -> bool:

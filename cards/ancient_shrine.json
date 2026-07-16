@@ -4,11 +4,10 @@
   "description": "Hidden deep within the woods stands a weathered shrine, untouched by time. Fresh flowers rest upon the altar despite no one being in sight. A faint warmth lingers in the air, as though something is quietly watching.",
   "image": "",
   "repeatable": false,
+  "card_type": "standalone",
   "trigger": {
     "flags": [],
-    "not_flags": [
-      "active_quest"
-    ]
+    "not_flags": []
   },
   "options": [
     {
