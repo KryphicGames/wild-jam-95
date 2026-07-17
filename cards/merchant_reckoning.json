@@ -1,0 +1,68 @@
+{
+  "id": "merchant_reckoning",
+  "title": "The Merchant Remembers",
+  "description": "The traveling merchant recognizes you before you recognize him.",
+  "image": "",
+  "repeatable": false,
+  "card_type": "standalone",
+  "trigger": {
+    "flags": [],
+    "any_flags": ["traded_fairly", "haggled_merchant", "robbed_merchant"],
+    "not_flags": []
+  },
+  "variants": {
+    "traded_fairly": {
+      "title": "A Fair Deal Repaid",
+      "description": "The merchant saved his finest goods for the traveler who treated him honestly. This time, the first offer truly is generous."
+    },
+    "haggled_merchant": {
+      "title": "The Rematch",
+      "description": "The merchant grins and produces a ledger. He has spent weeks preparing for the next time you tried to out-negotiate him."
+    },
+    "robbed_merchant": {
+      "title": "The Merchant's Reckoning",
+      "description": "The merchant is no longer alone. Armed guards step from behind his wagon as he demands payment for what you stole."
+    }
+  },
+  "options": [
+    {
+      "id": "trade_again",
+      "title": "Trade Again",
+      "description": "Put coin on the table and let both sides leave satisfied.",
+      "image": "",
+      "effects": {
+        "gold": -20,
+        "greed": -5,
+        "popularity": 10,
+        "add_flags": ["merchant_trust_earned"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "demand_a_favor",
+      "title": "Demand a Favor",
+      "description": "Use your shared history to secure a more profitable arrangement.",
+      "image": "",
+      "effects": {
+        "gold": 35,
+        "greed": 15,
+        "popularity": -5,
+        "add_flags": ["merchant_favor_claimed"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "avoid_the_merchant",
+      "title": "Avoid the Merchant",
+      "description": "Some accounts are best left unsettled.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": 0,
+        "popularity": -5,
+        "add_flags": ["merchant_avoided"],
+        "remove_flags": []
+      }
+    }
+  ]
+}

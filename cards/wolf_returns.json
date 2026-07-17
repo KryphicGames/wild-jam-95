@@ -1,0 +1,68 @@
+{
+  "id": "wolf_returns",
+  "title": "The Pack Returns",
+  "description": "Howls surround the road, carrying the memory of your earlier encounter.",
+  "image": "",
+  "repeatable": false,
+  "card_type": "standalone",
+  "trigger": {
+    "flags": [],
+    "any_flags": ["saved_wolf", "ignored_wolf", "killed_wolf"],
+    "not_flags": []
+  },
+  "variants": {
+    "saved_wolf": {
+      "title": "A Debt Repaid",
+      "description": "The wolf you saved emerges from the trees at the head of its pack. It lowers its head, then turns toward danger hidden farther down the road."
+    },
+    "ignored_wolf": {
+      "title": "The Wound Remembered",
+      "description": "A scarred wolf blocks the path. It survived without your help, and the pack behind it watches to see what you will do now."
+    },
+    "killed_wolf": {
+      "title": "The Pack's Judgment",
+      "description": "The pack has found the place where one of its own died. Their accusing eyes settle upon you as the circle tightens."
+    }
+  },
+  "options": [
+    {
+      "id": "offer_peace",
+      "title": "Offer Peace",
+      "description": "Lower your hands and trust that mercy can still be understood.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -5,
+        "popularity": 15,
+        "add_flags": ["wolf_pack_allies"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "seize_advantage",
+      "title": "Seize the Advantage",
+      "description": "Use the confusion to claim what the wilderness has hidden nearby.",
+      "image": "",
+      "effects": {
+        "gold": 25,
+        "greed": 10,
+        "popularity": -5,
+        "add_flags": ["outwitted_pack"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "keep_distance",
+      "title": "Keep Your Distance",
+      "description": "Leave the pack and its memories behind.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": 0,
+        "popularity": 0,
+        "add_flags": ["avoided_wolf_pack"],
+        "remove_flags": []
+      }
+    }
+  ]
+}

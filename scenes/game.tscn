@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://d3t55yyxnfb56"]
+[gd_scene load_steps=14 format=3 uid="uid://d3t55yyxnfb56"]
 
 [ext_resource type="PackedScene" uid="uid://cyk0ty5fwu5s2" path="res://components/fade.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://5m1wm6pufj05" path="res://scripts/game.gd" id="1_yqjtg"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://cs063wp4x20em" path="res://components/right_card.tscn" id="8_gee14"]
 [ext_resource type="PackedScene" uid="uid://oh3jc0l10f4s" path="res://components/middle_card.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://be6unwjlkhc2p" path="res://components/left_card.tscn" id="10_vtaks"]
+[ext_resource type="PackedScene" path="res://components/legend_summary.tscn" id="11_summary"]
+[ext_resource type="PackedScene" path="res://components/legend_traits.tscn" id="13_traits"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_iywne"]
 shader = ExtResource("4_lbhrr")
@@ -90,6 +92,25 @@ offset_top = 343.0
 offset_right = 489.0
 offset_bottom = 601.81824
 
+[node name="LegendTraits" parent="." instance=ExtResource("13_traits")]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 330.0
+offset_right = 248.0
+offset_bottom = 598.0
+
+[node name="DealHint" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 477.0
+offset_top = 614.0
+offset_right = 805.0
+offset_bottom = 640.0
+theme_override_colors/font_color = Color(0.82, 0.74, 0.6, 1)
+theme_override_font_sizes/font_size = 14
+text = "Click or press Space to deal quickly"
+horizontal_alignment = 1
+
 [node name="Vignette" type="ColorRect" parent="." unique_id=226354621]
 material = SubResource("ShaderMaterial_iywne")
 layout_mode = 1
@@ -99,3 +120,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="LegendSummary" parent="." instance=ExtResource("11_summary")]
+layout_mode = 1

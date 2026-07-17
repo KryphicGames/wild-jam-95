@@ -1,0 +1,56 @@
+{
+  "id": "freely_given_trust",
+  "title": "A Key Freely Given",
+  "description": "A dying innkeeper presses a key into your hand. Your selfless reputation convinced her that a stranger could be trusted with the future of her family.",
+  "image": "",
+  "repeatable": false,
+  "card_type": "standalone",
+  "trigger": {
+    "flags": [],
+    "not_flags": [],
+    "stats": {
+      "greed": {"max": -5}
+    }
+  },
+  "options": [
+    {
+      "id": "honor_the_trust",
+      "title": "Honor Her Trust",
+      "description": "Deliver the key and protect what she left behind.",
+      "image": "",
+      "effects": {
+        "gold": -10,
+        "greed": -10,
+        "popularity": 25,
+        "add_flags": ["innkeepers_trust_honored"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "open_the_vault",
+      "title": "Open It Yourself",
+      "description": "Trust is valuable because it creates opportunities no lock can prevent.",
+      "image": "",
+      "effects": {
+        "gold": 60,
+        "greed": 25,
+        "popularity": -20,
+        "add_flags": ["innkeepers_trust_broken"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "share_the_burden",
+      "title": "Share the Burden",
+      "description": "Ask the village elders to witness the key's safe return.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -5,
+        "popularity": 15,
+        "add_flags": ["innkeepers_key_returned"],
+        "remove_flags": []
+      }
+    }
+  ]
+}

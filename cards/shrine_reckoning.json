@@ -1,0 +1,68 @@
+{
+  "id": "shrine_reckoning",
+  "title": "The Shrine's Answer",
+  "description": "The ancient shrine has not forgotten your visit.",
+  "image": "",
+  "repeatable": false,
+  "card_type": "standalone",
+  "trigger": {
+    "flags": [],
+    "any_flags": ["honored_shrine", "searched_shrine", "desecrated_shrine"],
+    "not_flags": []
+  },
+  "variants": {
+    "honored_shrine": {
+      "title": "The Shrine's Blessing",
+      "description": "Warm light gathers around your footsteps. The offering you left has been accepted, and something unseen walks beside you."
+    },
+    "searched_shrine": {
+      "title": "What the Stones Concealed",
+      "description": "Dust falls from an object hidden in your pack. Something from beneath the shrine's stones has awakened."
+    },
+    "desecrated_shrine": {
+      "title": "The Shrine's Curse",
+      "description": "Fresh flowers wither wherever you pass. The presence from the shrine has followed you, and it is no longer silent."
+    }
+  },
+  "options": [
+    {
+      "id": "accept_the_sign",
+      "title": "Accept the Sign",
+      "description": "Acknowledge the power and accept whatever lesson it carries.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -10,
+        "popularity": 15,
+        "add_flags": ["shrine_reconciled"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "claim_the_relic",
+      "title": "Claim the Relic",
+      "description": "Power is useful whether it arrives as blessing or curse.",
+      "image": "",
+      "effects": {
+        "gold": 35,
+        "greed": 15,
+        "popularity": -10,
+        "add_flags": ["shrine_relic_claimed"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "break_the_connection",
+      "title": "Break the Connection",
+      "description": "Refuse to let an ancient presence decide who you become.",
+      "image": "",
+      "effects": {
+        "gold": -10,
+        "greed": 0,
+        "popularity": 5,
+        "add_flags": ["shrine_connection_broken"],
+        "remove_flags": []
+      }
+    }
+  ]
+}

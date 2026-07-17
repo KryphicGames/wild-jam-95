@@ -1,0 +1,53 @@
+{
+  "id": "knights_challenge",
+  "title": "The Challenger at Dawn",
+  "description": "A young warrior recognizes your crest and challenges you before a gathering crowd. They seek honor, but their trembling hands reveal how much they have to lose.",
+  "image": "",
+  "repeatable": false,
+  "card_type": "standalone",
+  "trigger": {
+    "flags": ["hero_knight"],
+    "not_flags": []
+  },
+  "options": [
+    {
+      "id": "accept_with_honor",
+      "title": "Accept with Honor",
+      "description": "Fight fairly and teach through restraint rather than humiliation.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -10,
+        "popularity": 25,
+        "add_flags": ["challenger_mentored"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "demand_a_wager",
+      "title": "Demand a Wager",
+      "description": "A public challenge should carry a worthwhile prize.",
+      "image": "",
+      "effects": {
+        "gold": 35,
+        "greed": 15,
+        "popularity": 5,
+        "add_flags": ["challenger_defeated"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "refuse_the_spectacle",
+      "title": "Refuse the Spectacle",
+      "description": "Honor is not proven by answering every demand for violence.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -5,
+        "popularity": -5,
+        "add_flags": ["challenge_refused"],
+        "remove_flags": []
+      }
+    }
+  ]
+}

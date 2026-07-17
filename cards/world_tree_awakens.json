@@ -16,6 +16,11 @@
       "id": "embrace_power",
       "title": "Embrace Its Power",
       "description": "Accept the World Tree's gift and become something greater than human.",
+      "result": "The forbidden knowledge you pursued gives shape to the Tree's offer. You accept, and the person who began this journey becomes something new.",
+      "requirements": {
+        "any_flags": ["swore_loyalty", "forbidden_knowledge", "sold_spellbook"]
+      },
+      "locked_reason": "You did not pursue the knowledge or bargains needed to survive the Tree's power.",
       "image": "",
       "effects": {
         "gold": 0,
@@ -44,6 +49,11 @@
       "id": "seal_the_tree",
       "title": "Seal the Tree",
       "description": "Use everything you've learned to imprison the ancient power forever.",
+      "result": "Every sacrifice and betrayal becomes part of the binding. The roots still, and the impossible weight of the seal settles upon you.",
+      "requirements": {
+        "any_flags": ["paid_with_gold", "betrayed_witch", "destroyed_spellbook"]
+      },
+      "locked_reason": "Your path did not uncover the knowledge required to seal the World Tree.",
       "image": "",
       "effects": {
         "gold": 0,
@@ -72,6 +82,11 @@
       "id": "walk_away_tree",
       "title": "Walk Away",
       "description": "Some powers were never meant to be controlled. You leave before the tree can tempt you further.",
+      "result": "You recognize the same temptation you refused before. This time, you leave it behind knowing exactly what might have been yours.",
+      "requirements": {
+        "any_flags": ["refused_witch"]
+      },
+      "locked_reason": "Your earlier pursuit of the Tree has carried you too far to simply walk away.",
       "image": "",
       "effects": {
         "gold": 20,

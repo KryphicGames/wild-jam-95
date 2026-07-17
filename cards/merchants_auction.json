@@ -1,0 +1,53 @@
+{
+  "id": "merchants_auction",
+  "title": "The Midnight Auction",
+  "description": "A private auction gathers beneath lantern light. You recognize false bids, hidden value, and three different attempts to manipulate the room.",
+  "image": "",
+  "repeatable": false,
+  "card_type": "standalone",
+  "trigger": {
+    "flags": ["hero_merchant"],
+    "not_flags": []
+  },
+  "options": [
+    {
+      "id": "buy_hidden_masterpiece",
+      "title": "Buy the Hidden Masterpiece",
+      "description": "Risk your capital on the one item everyone else overlooked.",
+      "image": "",
+      "effects": {
+        "gold": -35,
+        "greed": 5,
+        "popularity": 20,
+        "add_flags": ["masterpiece_found"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "control_the_bidding",
+      "title": "Control the Bidding",
+      "description": "Turn every rival's deception into your profit.",
+      "image": "",
+      "effects": {
+        "gold": 60,
+        "greed": 20,
+        "popularity": -15,
+        "add_flags": ["auction_manipulated"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "expose_the_rigging",
+      "title": "Expose the Rigging",
+      "description": "Reveal the scheme and restore honest trade to the room.",
+      "image": "",
+      "effects": {
+        "gold": 10,
+        "greed": -10,
+        "popularity": 25,
+        "add_flags": ["auction_exposed"],
+        "remove_flags": []
+      }
+    }
+  ]
+}

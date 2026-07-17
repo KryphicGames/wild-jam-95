@@ -16,6 +16,11 @@
       "id": "defend_the_people",
       "title": "Defend the Kingdom",
       "description": "Lead the people to safety and organize a desperate defense against the colossal fortress.",
+      "result": "The alliances and loyalties formed along your journey answer your call. A frightened kingdom becomes a united defense.",
+      "requirements": {
+        "any_flags": ["supported_heir", "searched_for_king", "joined_soldiers"]
+      },
+      "locked_reason": "You did not build the trust or alliances required to rally the kingdom.",
       "image": "",
       "effects": {
         "gold": 0,
@@ -42,6 +47,11 @@
       "id": "claim_the_fortress",
       "title": "Claim the Fortress",
       "description": "If such power exists, it should belong to you. Board the fortress and seize control.",
+      "result": "Your earlier defiance prepared you to seize power rather than ask for it. The fortress becomes the throne you chose for yourself.",
+      "requirements": {
+        "any_flags": ["claimed_throne", "defied_the_crown"]
+      },
+      "locked_reason": "Your path never established the ambition or authority needed to claim the fortress.",
       "image": "",
       "effects": {
         "gold": 50,
@@ -68,6 +78,11 @@
       "id": "loot_the_chaos",
       "title": "Loot the Chaos",
       "description": "While everyone else focuses on survival, you quietly gather whatever treasures have been abandoned.",
+      "result": "You recognize the opportunities hidden inside disaster. By the time order returns, the abandoned wealth has already changed hands.",
+      "requirements": {
+        "any_flags": ["bribed_captain", "paid_summons", "searched_for_king"]
+      },
+      "locked_reason": "Your earlier choices did not provide the contacts or information needed to profit from the chaos.",
       "image": "",
       "effects": {
         "gold": 100,

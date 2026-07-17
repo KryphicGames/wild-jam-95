@@ -1,0 +1,56 @@
+{
+  "id": "peoples_petition",
+  "title": "The People's Petition",
+  "description": "Your reputation has traveled ahead of you. Villagers gather with a petition, believing that someone as admired as you can force a cruel magistrate to listen.",
+  "image": "",
+  "repeatable": false,
+  "card_type": "standalone",
+  "trigger": {
+    "flags": [],
+    "not_flags": [],
+    "stats": {
+      "popularity": {"min": 30}
+    }
+  },
+  "options": [
+    {
+      "id": "champion_petition",
+      "title": "Champion Their Cause",
+      "description": "Put your reputation at risk for people with no influence of their own.",
+      "image": "",
+      "effects": {
+        "gold": -15,
+        "greed": -10,
+        "popularity": 25,
+        "add_flags": ["magistrate_opposed"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "sell_endorsement",
+      "title": "Sell Your Endorsement",
+      "description": "The magistrate will pay well for your public support.",
+      "image": "",
+      "effects": {
+        "gold": 50,
+        "greed": 20,
+        "popularity": -30,
+        "add_flags": ["magistrate_endorsed"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "offer_advice",
+      "title": "Offer Advice",
+      "description": "Preserve your influence while teaching them to organize without you.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": 0,
+        "popularity": 5,
+        "add_flags": ["petitioners_advised"],
+        "remove_flags": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "gilded_temptation",
+  "title": "The Gilded Door",
+  "description": "A door of polished gold appears where no building stood yesterday. A voice beyond it promises that ambition has finally made you worthy to enter.",
+  "image": "",
+  "repeatable": false,
+  "card_type": "standalone",
+  "trigger": {
+    "flags": [],
+    "not_flags": [],
+    "stats": {
+      "greed": {"min": 25}
+    }
+  },
+  "options": [
+    {
+      "id": "enter_gilded_door",
+      "title": "Enter the Door",
+      "description": "Accept the invitation and discover what ambition earns.",
+      "image": "",
+      "effects": {
+        "gold": 75,
+        "greed": 20,
+        "popularity": -20,
+        "add_flags": ["gilded_bargain"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "strip_the_gold",
+      "title": "Strip Away the Gold",
+      "description": "A magical door is still made of something valuable.",
+      "image": "",
+      "effects": {
+        "gold": 40,
+        "greed": 10,
+        "popularity": -5,
+        "add_flags": ["gilded_door_looted"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "turn_away_from_gold",
+      "title": "Turn Away",
+      "description": "Prove that wanting more does not mean accepting every price.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -20,
+        "popularity": 15,
+        "add_flags": ["gilded_door_refused"],
+        "remove_flags": []
+      }
+    }
+  ]
+}

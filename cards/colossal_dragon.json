@@ -16,6 +16,11 @@
       "id": "stand_before_dragon",
       "title": "Stand Before It",
       "description": "You refuse to run, placing yourself between the dragon and the valley.",
+      "result": "The dragon's fury meets the history you share. It pauses long enough for the valley to see that courage can change even a creature of legend.",
+      "requirements": {
+        "any_flags": ["dragon_protected", "dragon_pursued", "destroyed_dragon_egg"]
+      },
+      "locked_reason": "Your path through the dragon's story did not earn the trust or resolve needed to stand before it.",
       "image": "",
       "effects": {
         "gold": 0,
@@ -42,6 +47,11 @@
       "id": "command_dragon",
       "title": "Attempt to Command It",
       "description": "You step forward and demand that the colossal creature submit to your will.",
+      "result": "You speak with the authority your earlier choices created. The dragon recognizes either a teacher—or someone ruthless enough to be obeyed.",
+      "requirements": {
+        "any_flags": ["dragon_trained", "dragon_exploited"]
+      },
+      "locked_reason": "Nothing in your history with the dragon gives you the authority to command it.",
       "image": "",
       "effects": {
         "gold": 0,
@@ -68,6 +78,11 @@
       "id": "steal_hoard",
       "title": "Steal Its Hoard",
       "description": "While the dragon turns toward the valley, you slip into its cavern and seize whatever treasure you can carry.",
+      "result": "You use everything you learned about the dragon to reach its hoard. You escape wealthy, leaving the valley to face what follows.",
+      "requirements": {
+        "any_flags": ["dragon_abandoned", "dragon_hunted", "destroyed_dragon_egg"]
+      },
+      "locked_reason": "Your earlier path never revealed the weakness needed to reach the hoard safely.",
       "image": "",
       "effects": {
         "gold": 75,

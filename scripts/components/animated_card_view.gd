@@ -6,10 +6,12 @@ extends TextureRect
 
 var _table_position := Vector2.ZERO
 var _active_tween: Tween
+var _animation_speed_scale := 1.0
 
 
 func prepare_face_down(draw_origin: Vector2, starting_rotation_degrees: float = 0.0) -> void:
 	_stop_active_tween()
+	_animation_speed_scale = 1.0
 	_table_position = position
 	pivot_offset = size * 0.5
 	position = draw_origin
@@ -24,6 +26,7 @@ func prepare_face_down(draw_origin: Vector2, starting_rotation_degrees: float = 
 func draw_to_table(duration: float = 0.45) -> void:
 	_stop_active_tween()
 	_active_tween = create_tween()
+	_active_tween.set_speed_scale(_animation_speed_scale)
 	_active_tween.set_trans(Tween.TRANS_QUAD)
 	_active_tween.set_ease(Tween.EASE_OUT)
 	_active_tween.tween_property(self, "position", _table_position, duration)
@@ -38,6 +41,7 @@ func flip_to_front(duration: float = 0.3) -> void:
 	var half_duration := duration * 0.5
 
 	_active_tween = create_tween()
+	_active_tween.set_speed_scale(_animation_speed_scale)
 	_active_tween.set_trans(Tween.TRANS_QUAD)
 	_active_tween.set_ease(Tween.EASE_IN)
 	_active_tween.tween_property(self, "scale", Vector2(0.0, 1.0), half_duration)
@@ -48,6 +52,7 @@ func flip_to_front(duration: float = 0.3) -> void:
 	self_modulate = _get_front_modulate()
 
 	_active_tween = create_tween()
+	_active_tween.set_speed_scale(_animation_speed_scale)
 	_active_tween.set_trans(Tween.TRANS_QUAD)
 	_active_tween.set_ease(Tween.EASE_OUT)
 	_active_tween.tween_property(self, "scale", Vector2.ONE, half_duration)
@@ -72,6 +77,12 @@ func show_front_immediately() -> void:
 	front_content.show()
 	self_modulate = _get_front_modulate()
 	show()
+
+
+func accelerate_animation(speed_scale: float = 6.0) -> void:
+	_animation_speed_scale = maxf(_animation_speed_scale, speed_scale)
+	if _active_tween != null && _active_tween.is_valid():
+		_active_tween.set_speed_scale(_animation_speed_scale)
 
 
 func _stop_active_tween() -> void:

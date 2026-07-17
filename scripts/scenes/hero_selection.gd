@@ -6,6 +6,10 @@ const GAME_SCENE := "res://scenes/game.tscn"
 const MAIN_MENU_SCENE := "res://scenes/main_menu.tscn"
 const CARD_DRAW_OFFSET := Vector2(100, 0)
 const CARD_START_ROTATIONS := [-6.0, 0.0, 6.0]
+const CARD_DRAW_SFX := "res://assets/audio/sounds/cards/Card draw.wav"
+const CARD_FLIP_SFX := "res://assets/audio/sounds/cards/Card flip 2.wav"
+const HERO_SELECTED_SFX := "res://assets/audio/sounds/ui/positive selection.wav"
+const CARD_FLIP_PITCHES := [0.94, 1.0, 1.06]
 
 @export var logger_prefix := "HeroSelection"
 
@@ -14,9 +18,11 @@ const CARD_START_ROTATIONS := [-6.0, 0.0, 6.0]
 @onready var back_button: Button = $Content/Layout/Header/Back
 @onready var fade_rect: ColorRect = $Fade
 @onready var fade_player: AnimationPlayer = $Fade/AnimationPlayer
+@onready var deal_hint: Label = $Content/Layout/DealHint
 
 var _choice_cards: Array[HeroChoiceCard] = []
 var _selection_in_progress := false
+var _revealing_cards := false
 
 
 func _ready() -> void:
@@ -44,15 +50,43 @@ func _ready() -> void:
 		_choice_cards.append(choice_card)
 
 	await get_tree().process_frame
+	_revealing_cards = true
+	deal_hint.show()
 	var draw_origin := Vector2(choices_container.size.x, 0) + CARD_DRAW_OFFSET
 	for index in range(_choice_cards.size()):
 		_choice_cards[index].prepare_face_down(
 			draw_origin,
 			CARD_START_ROTATIONS[index]
 		)
-	for choice_card in _choice_cards:
-		await choice_card.draw_and_flip(0.32, 0.24)
+	AudioManager.play(CARD_DRAW_SFX, AudioManager.Audio.UI, -12.0)
+	for index in range(_choice_cards.size()):
+		await _choice_cards[index].draw_to_table(0.44)
+		AudioManager.play(
+			CARD_FLIP_SFX,
+			AudioManager.Audio.UI,
+			-16.0,
+			CARD_FLIP_PITCHES[index]
+		)
+		await _choice_cards[index].flip_to_front(0.34)
 	_set_choices_enabled(true)
+	_revealing_cards = false
+	deal_hint.hide()
+
+
+func _input(event: InputEvent) -> void:
+	if !_revealing_cards:
+		return
+	var should_accelerate := event.is_action_pressed("ui_accept")
+	if event is InputEventMouseButton:
+		should_accelerate = should_accelerate || (
+			event.button_index == MOUSE_BUTTON_LEFT && event.pressed
+		)
+	if !should_accelerate:
+		return
+	for choice_card in _choice_cards:
+		choice_card.accelerate_animation()
+	deal_hint.hide()
+	get_viewport().set_input_as_handled()
 
 
 func _on_hero_selected(hero_id: String) -> void:
@@ -62,6 +96,7 @@ func _on_hero_selected(hero_id: String) -> void:
 		_show_error("That hero could not be selected.")
 		return
 
+	AudioManager.play(HERO_SELECTED_SFX, AudioManager.Audio.UI, -10.0)
 	_selection_in_progress = true
 	_set_choices_enabled(false)
 	back_button.disabled = true
