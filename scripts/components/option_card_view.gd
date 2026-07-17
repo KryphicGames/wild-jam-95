@@ -16,6 +16,7 @@ const STAT_DISPLAY_NAMES := {
 var _option_id := ""
 var _is_available := false
 var _input_enabled := false
+var _dismiss_tween: Tween
 
 
 func _ready() -> void:
@@ -23,7 +24,13 @@ func _ready() -> void:
 	selection_requested.connect(_on_selection_requested)
 
 
-func present(option: Dictionary, is_available: bool) -> void:
+func present(
+	option: Dictionary,
+	is_available: bool,
+	locked_reason: String = ""
+) -> void:
+	_stop_dismiss_tween()
+	scale = Vector2.ONE
 	_option_id = str(option.get("id", ""))
 	_is_available = is_available
 	_input_enabled = false
@@ -31,12 +38,13 @@ func present(option: Dictionary, is_available: bool) -> void:
 	description_label.text = str(option.get("description", ""))
 	effects_label.text = _format_effects(option.get("effects", {}))
 	_set_image(str(option.get("image", "")))
-	tooltip_text = "" if _is_available else "You do not have enough of one or more stats to choose this."
+	tooltip_text = "" if _is_available else locked_reason
 	_update_selection_state()
 	show()
 
 
 func clear_option() -> void:
+	_stop_dismiss_tween()
 	_option_id = ""
 	_is_available = false
 	_input_enabled = false
@@ -46,6 +54,17 @@ func clear_option() -> void:
 	tooltip_text = ""
 	_update_selection_state()
 	hide()
+
+
+func begin_dismiss() -> void:
+	set_input_enabled(false)
+	_stop_dismiss_tween()
+	_dismiss_tween = create_tween()
+	_dismiss_tween.set_trans(Tween.TRANS_QUAD)
+	_dismiss_tween.set_ease(Tween.EASE_IN)
+	_dismiss_tween.tween_property(self, "self_modulate:a", 0.0, 0.16)
+	_dismiss_tween.parallel().tween_property(self, "scale", Vector2(0.96, 0.96), 0.16)
+	_dismiss_tween.tween_callback(hide)
 
 
 func set_input_enabled(enabled: bool) -> void:
@@ -101,3 +120,9 @@ func _set_image(image_path: String) -> void:
 
 	option_image.texture = texture
 	option_image.show()
+
+
+func _stop_dismiss_tween() -> void:
+	if _dismiss_tween != null && _dismiss_tween.is_valid():
+		_dismiss_tween.kill()
+	_dismiss_tween = null

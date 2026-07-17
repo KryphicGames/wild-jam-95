@@ -55,5 +55,13 @@ text = "Event description"
 fit_content = false
 scroll_active = false
 
+[node name="Continue" type="Button" parent="Margin/Contents"]
+visible = false
+custom_minimum_size = Vector2(160, 34)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 15
+text = "Continue"
+
 [node name="CardBack" parent="." instance=ExtResource("3_back")]
 layout_mode = 1

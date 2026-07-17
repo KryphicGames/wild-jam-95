@@ -1,0 +1,68 @@
+{
+  "id": "box_reckoning",
+  "title": "The Box Calls Again",
+  "description": "The mysterious wooden box refuses to remain in the past.",
+  "image": "",
+  "repeatable": false,
+  "card_type": "standalone",
+  "trigger": {
+    "flags": [],
+    "any_flags": ["opened_mysterious_box", "returned_mysterious_box", "ignored_mysterious_box"],
+    "not_flags": []
+  },
+  "variants": {
+    "opened_mysterious_box": {
+      "title": "What Escaped the Box",
+      "description": "Ever since you opened the box, your shadow has moved a heartbeat too late. Tonight, it finally speaks."
+    },
+    "returned_mysterious_box": {
+      "title": "Payment for the Returned Box",
+      "description": "The hooded stranger returns carrying the same box. They bow, insisting that one favor is now owed to you."
+    },
+    "ignored_mysterious_box": {
+      "title": "The Box That Followed",
+      "description": "The box sits beside your bedroll despite being left miles behind. Fresh lettering on its lid spells your name."
+    }
+  },
+  "options": [
+    {
+      "id": "face_the_mystery",
+      "title": "Face the Mystery",
+      "description": "Answers are worth the danger of asking the final question.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -5,
+        "popularity": 15,
+        "add_flags": ["box_mystery_faced"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "sell_the_secret",
+      "title": "Sell the Secret",
+      "description": "Someone will pay well to make this mystery their problem.",
+      "image": "",
+      "effects": {
+        "gold": 45,
+        "greed": 15,
+        "popularity": -10,
+        "add_flags": ["box_secret_sold"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "refuse_the_box",
+      "title": "Refuse It Again",
+      "description": "Some questions become safer when left unanswered.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": 0,
+        "popularity": 5,
+        "add_flags": ["box_final_refusal"],
+        "remove_flags": []
+      }
+    }
+  ]
+}

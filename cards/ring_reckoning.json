@@ -1,0 +1,68 @@
+{
+  "id": "ring_reckoning",
+  "title": "The Ring's Owner",
+  "description": "The lost ring has brought your earlier decision back to you.",
+  "image": "",
+  "repeatable": false,
+  "card_type": "standalone",
+  "trigger": {
+    "flags": [],
+    "any_flags": ["returned_ring", "sold_ring", "kept_ring"],
+    "not_flags": []
+  },
+  "variants": {
+    "returned_ring": {
+      "title": "A Family Remembers",
+      "description": "The elderly woman's family finds you at an inn. The ring was an heirloom, and they have not forgotten the stranger who returned it."
+    },
+    "sold_ring": {
+      "title": "A Familiar Ring for Sale",
+      "description": "A jeweler displays the ring you sold, while an elderly woman argues that it was stolen from her family. Then she notices you."
+    },
+    "kept_ring": {
+      "title": "The Ring Is Recognized",
+      "description": "The ring slips into view while you pay for a meal. Across the room, its elderly owner gasps and points directly at you."
+    }
+  },
+  "options": [
+    {
+      "id": "tell_the_truth",
+      "title": "Tell the Truth",
+      "description": "Explain exactly what happened and accept the consequences.",
+      "image": "",
+      "effects": {
+        "gold": -10,
+        "greed": -5,
+        "popularity": 20,
+        "add_flags": ["ring_truth_told"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "bargain_over_ring",
+      "title": "Strike a Bargain",
+      "description": "Memory has value, but so does leverage.",
+      "image": "",
+      "effects": {
+        "gold": 25,
+        "greed": 10,
+        "popularity": -5,
+        "add_flags": ["ring_bargain_struck"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "deny_everything",
+      "title": "Deny Everything",
+      "description": "A familiar face is not proof of anything.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": 5,
+        "popularity": -15,
+        "add_flags": ["ring_claim_denied"],
+        "remove_flags": []
+      }
+    }
+  ]
+}

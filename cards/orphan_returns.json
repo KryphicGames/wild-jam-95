@@ -1,0 +1,72 @@
+{
+  "id": "orphan_returns",
+  "title": "A Familiar Child",
+  "description": "The child from the roadside has found you again.",
+  "image": "",
+  "repeatable": false,
+  "card_type": "standalone",
+  "trigger": {
+    "flags": [],
+    "any_flags": [
+      "helped_orphan",
+      "gave_orphan_gold",
+      "ignored_orphan"
+    ],
+    "not_flags": []
+  },
+  "variants": {
+    "helped_orphan": {
+      "title": "A Promise Remembered",
+      "description": "The child you helped runs toward you wearing clean clothes and a hopeful smile. They have found safety—and came back to thank you."
+    },
+    "gave_orphan_gold": {
+      "title": "Coins Well Spent",
+      "description": "The child recognizes you immediately. Your coins bought food and shelter, but now they ask whether generosity was all you had to offer."
+    },
+    "ignored_orphan": {
+      "title": "The Child You Left Behind",
+      "description": "A young pickpocket is caught reaching for your purse. When they look up, you recognize the child you abandoned in the rain."
+    }
+  },
+  "options": [
+    {
+      "id": "offer_a_place",
+      "title": "Offer Them a Place",
+      "description": "Make room beside your fire and prove that this meeting can end differently.",
+      "image": "",
+      "effects": {
+        "gold": -10,
+        "greed": -5,
+        "popularity": 15,
+        "add_flags": ["orphan_bond"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "ask_for_help",
+      "title": "Ask What They Know",
+      "description": "Streetwise eyes notice opportunities that heroes often miss.",
+      "image": "",
+      "effects": {
+        "gold": 15,
+        "greed": 5,
+        "popularity": 5,
+        "add_flags": ["orphan_informant"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "send_them_away",
+      "title": "Send Them Away",
+      "description": "Whatever happened before, you cannot carry every burden on the road.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": 5,
+        "popularity": -10,
+        "add_flags": ["orphan_rejected"],
+        "remove_flags": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "scholars_observatory",
+  "title": "The Forgotten Observatory",
+  "description": "An abandoned observatory contains star charts written in a language only a dedicated scholar would recognize. One final calculation remains unfinished.",
+  "image": "",
+  "repeatable": false,
+  "card_type": "standalone",
+  "trigger": {
+    "flags": ["hero_scholar"],
+    "not_flags": []
+  },
+  "options": [
+    {
+      "id": "finish_calculation",
+      "title": "Finish the Calculation",
+      "description": "Complete the lost scholar's work and share the discovery.",
+      "image": "",
+      "effects": {
+        "gold": 0,
+        "greed": -5,
+        "popularity": 25,
+        "add_flags": ["stars_understood"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "sell_star_charts",
+      "title": "Sell the Star Charts",
+      "description": "Collectors will pay dearly for knowledge they cannot read.",
+      "image": "",
+      "effects": {
+        "gold": 45,
+        "greed": 15,
+        "popularity": -5,
+        "add_flags": ["star_charts_sold"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "preserve_observatory",
+      "title": "Preserve the Observatory",
+      "description": "Seal the doors until the knowledge can be studied responsibly.",
+      "image": "",
+      "effects": {
+        "gold": -10,
+        "greed": -5,
+        "popularity": 10,
+        "add_flags": ["observatory_preserved"],
+        "remove_flags": []
+      }
+    }
+  ]
+}

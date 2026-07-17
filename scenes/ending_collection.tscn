@@ -1,0 +1,107 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/scenes/ending_collection.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://nmakvgr7t5ry" path="res://assets/textures/bg.png" id="2_background"]
+[ext_resource type="Shader" uid="uid://btixtusi73vku" path="res://shaders/vignette.gdshader" id="3_vignette"]
+[ext_resource type="PackedScene" uid="uid://cyk0ty5fwu5s2" path="res://components/fade.tscn" id="4_fade"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vignette"]
+shader = ExtResource("3_vignette")
+shader_parameter/alpha = 0.35
+shader_parameter/inner_radius = 0.65
+shader_parameter/outer_radius = 1.08
+
+[node name="EndingCollection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_background")
+expand_mode = 1
+
+[node name="Shade" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08, 0.03, 0.01, 0.42)
+mouse_filter = 2
+
+[node name="Content" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 190
+theme_override_constants/margin_top = 42
+theme_override_constants/margin_right = 190
+theme_override_constants/margin_bottom = 34
+
+[node name="Layout" type="VBoxContainer" parent="Content"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="Content/Layout"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "Your Legends"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="Content/Layout"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Every ending you discover is recorded here."
+horizontal_alignment = 1
+
+[node name="Progress" type="Label" parent="Content/Layout"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.76, 0.45, 1)
+theme_override_font_sizes/font_size = 20
+text = "0 of 9 legends discovered"
+horizontal_alignment = 1
+
+[node name="Endings" type="RichTextLabel" parent="Content/Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.95, 0.9, 0.8, 1)
+theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 20
+bbcode_enabled = true
+text = "Ending collection"
+scroll_active = true
+
+[node name="Back" type="Button" parent="Content/Layout"]
+custom_minimum_size = Vector2(240, 46)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "Back"
+
+[node name="Vignette" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_vignette")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Fade" parent="." instance=ExtResource("4_fade")]
+visible = false
+layout_mode = 1

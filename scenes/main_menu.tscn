@@ -77,6 +77,13 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 24
 text = "BUTTON_SETTINGS"
 
+[node name="Legends" type="Button" parent="Contents/Hero"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+text = "LEGENDS"
+
 [node name="Information" type="HBoxContainer" parent="Contents" unique_id=1086388878]
 layout_mode = 2
 
@@ -133,4 +140,5 @@ layout_mode = 1
 
 [connection signal="pressed" from="Contents/Hero/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Contents/Hero/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Contents/Hero/Legends" to="." method="_on_legends_pressed"]
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]

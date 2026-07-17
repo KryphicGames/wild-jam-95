@@ -1,0 +1,56 @@
+{
+  "id": "infamous_offer",
+  "title": "An Offer Made in Shadows",
+  "description": "Your reputation has reached people who prefer feared associates. A masked envoy offers profitable work precisely because respectable heroes would refuse it.",
+  "image": "",
+  "repeatable": false,
+  "card_type": "standalone",
+  "trigger": {
+    "flags": [],
+    "not_flags": [],
+    "stats": {
+      "popularity": {"max": -10}
+    }
+  },
+  "options": [
+    {
+      "id": "accept_shadow_work",
+      "title": "Accept the Work",
+      "description": "If the realm already distrusts you, its rules offer little protection.",
+      "image": "",
+      "effects": {
+        "gold": 60,
+        "greed": 20,
+        "popularity": -15,
+        "add_flags": ["shadow_contract"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "betray_the_envoy",
+      "title": "Expose the Envoy",
+      "description": "Use the offer to prove the rumors about you wrong.",
+      "image": "",
+      "effects": {
+        "gold": 10,
+        "greed": -5,
+        "popularity": 25,
+        "add_flags": ["envoy_exposed"],
+        "remove_flags": []
+      }
+    },
+    {
+      "id": "demand_more",
+      "title": "Demand More",
+      "description": "A dangerous reputation should command a dangerous price.",
+      "image": "",
+      "effects": {
+        "gold": 85,
+        "greed": 30,
+        "popularity": -20,
+        "add_flags": ["shadow_contract_expanded"],
+        "remove_flags": []
+      }
+    }
+  ]
+}
